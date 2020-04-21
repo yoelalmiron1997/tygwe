@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+  <title>JS - Vue</title>
+</head>
+<body>
+	<div id="app">
+		{{ message }}
+
+		<hr>
+
+		<div>
+			<button @click="increment()">Incrementar</button>
+			<p>El contador está en: {{ counter }}</p>
+		</div>
+
+		<hr>
+
+		<div>
+			<input type="text" v-model="input">
+
+			<p>El valor del input es: {{ input }}</p>
+		</div>
+
+		<hr>
+
+		<h1>Bitcoin price</h1>
+
+		<ul>
+			<li v-for="currency in currencies">
+				{{ currency.description }}
+				<span v-html="currency.symbol"></span>{{ currency.rate_float | currencyfixed }}
+			</li>
+		</ul>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	<script src="scripts.js"></script>
+</body>
+</html>
