@@ -1,0 +1,56 @@
+body{
+	margin:0px;
+	display:flex;
+	flex-direction:column;
+	font-family:'Segoe UI',SegoeUI,'Segoe WP',Tahoma,Arial,sans-serif;
+    font-size: 18px;
+}
+header{
+	flex:initial;
+	display:flex;
+	flex-direction:row;
+	background-color:white;
+}
+header img{
+	flex:initial;
+}
+.usuario{
+	flex:1 1;
+	display:flex;
+	justify-content:flex-end;
+    align-items:center;
+	font-size:18px;
+	font-weight:bold;
+	padding-right:10px;
+}
+section.wrapper{
+	display:flex;
+	flex-direction:row;
+	flex: 1 1;
+}
+aside{
+	background-color:yellow;
+	display:flex;
+	flex:initial;
+	width:200px;
+}
+nav{
+	background-color:grey;
+	display:flex;
+	flex:initial;
+	height:50px;
+}
+section.content{
+	display:flex;
+	flex:1 1
+	justify-content:center;
+    align-items:center;
+}
+footer{
+	display:flex;
+	flex-initial;
+	height:100px;
+	justify-content:center;
+    align-items:center;
+	border-top: solid 1px #aaa;
+}
