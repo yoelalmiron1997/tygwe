@@ -33,12 +33,24 @@ const ListadoTareas = () => {
         </ul>
       ) : null}
       {linkone ? (
-        <ul className="listado-tareas">
-          <li className="tarea">Proyectos</li>
-          {proyectos.map((item) => (
-            <li className="tarea">{item.company}</li>
-          ))}
-        </ul>
+        <div class="">
+          <h1 class="">Tu primer trabajo</h1>
+          <ul className="listado-tareas">
+            <li className="tarea">Proyectos disponibles</li>
+            {proyectos.map((item) => (
+              <li className="tarea">
+                Company:{item.company}
+                <br></br>
+                Time:{item.type}
+                <br></br>
+                title:{item.title}
+                <br></br>
+                About for position:{item.url}
+                <br></br>
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : null}
       {linktwo ? (
         <ul className="listado-tareas">

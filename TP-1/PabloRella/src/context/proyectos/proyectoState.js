@@ -6,7 +6,6 @@ import {
   FORMULARIO_PROYECTO,
   LINKONE,
   LINKTWO,
-  OBTENER_PROYECTOS,
   PROYECTO_ERROR,
 } from "../../types";
 import clienteAxios from "../../config/axios";
@@ -49,7 +48,8 @@ const ProyectoState = (props) => {
       }
       if (quienfue === "LINKTWO") {
         var resultado = await clienteAxios.get(
-          "https://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com"
+          /*           "https://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com" */
+          "https://www.thecocktaildb.com/api/json/v1/1/random.php"
         );
       }
       dispatch({
