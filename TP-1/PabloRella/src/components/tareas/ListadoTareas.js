@@ -54,10 +54,30 @@ const ListadoTareas = () => {
       ) : null}
       {linktwo ? (
         <ul className="listado-tareas">
-          <li className="tarea">Proyectos</li>
-          {proyectos.domains.map((item) => (
-            <li className="tarea">{item.domain}</li>
-          ))}
+          <li className="tarea">Blog de humor: vídeos de humor</li>
+          {
+            proyectos.response.posts.map((item) => (
+              <li className="tarea">
+                blog_name:{item.blog_name}
+                <br></br>
+                state:{item.state}
+                <br></br>
+                summary:{item.summary}
+                <br></br>
+                format:{item.format}
+                <br></br>
+                <iframe
+                  width="420"
+                  height="315"
+                  src={item.video_url}
+                  frameborder="0"
+                  allowfullscreen="allowfullscreen"
+                ></iframe>
+              </li>
+            )) /* console.log(
+              proyectos.response.posts
+            ) */
+          }
         </ul>
       ) : null}
     </Fragment>

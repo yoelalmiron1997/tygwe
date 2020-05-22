@@ -49,7 +49,7 @@ const ProyectoState = (props) => {
       if (quienfue === "LINKTWO") {
         var resultado = await clienteAxios.get(
           /*           "https://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com" */
-          "https://www.thecocktaildb.com/api/json/v1/1/random.php"
+          "https://api.tumblr.com/v2/blog/luisonte.tumblr.com/posts?api_key=jzul98NG20pE3lb5HV84Jacl7mJopeDSdBkdfNCoOijJKahORb"
         );
       }
       dispatch({
