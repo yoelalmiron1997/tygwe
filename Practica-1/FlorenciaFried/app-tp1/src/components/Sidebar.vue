@@ -1,6 +1,5 @@
 <template>
   <aside class="sidebar">
-    Desde Sidebar
   </aside>
 </template>
 
@@ -13,9 +12,27 @@ export default {
 
 <style scoped>
 .sidebar {
-  width: 17%;
-  background-color: black;
+  width: 20%;
+  background-color: #f7c2fe;
   height: 70vh;
   color: #fff;
+}
+
+@media (max-width: 320px) {
+  .sidebar {
+    height: 83vh;
+  }
+}
+
+@media (min-width: 321px)) {
+  .sidebar {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 376px) {
+  .sidebar {
+    height: 75vh;
+  }
 }
 </style>
