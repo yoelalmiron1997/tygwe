@@ -1,14 +1,16 @@
 <template>
   <aside class="sidebar">
     <div class="presentation">
-      <button class="button" v-on:click="type='video'">VER PRESENTACIÓN</button>
+      <button class="button" v-on:click="type = 'video'">
+        VER PRESENTACIÓN
+      </button>
     </div>
 
-    <form class="form">
+    <form class="form" @submit="checkForm()">
       <div class="div">
         <label class="label" for="btc">Elija la moneda</label>
 
-        <select class="select" id="btc" v-model="btc" name="btc">
+        <select class="select" id="btc" v-model="coinbtc" name="btc">
           <option>ARS</option>
           <option>EUR</option>
           <option>USD</option>
@@ -17,10 +19,14 @@
         <input class="input" type="submit" value="Buscar precio del Bitcoin" />
       </div>
 
+        <p v-if="error">Debe elegir una opción</p>
+    </form>
+
+    <form class="form" @submit="checkFormDai()">
       <div class="div">
         <label class="label" for="dai">Elija la moneda</label>
 
-        <select class="select" id="dai" v-model="dai" name="dai">
+        <select class="select" id="dai" v-model="coindai" name="dai">
           <option>ARS</option>
           <option>EUR</option>
           <option>USD</option>
@@ -44,6 +50,9 @@ export default {
   data: function () {
     return {
       type: ' ',
+      coinbtc: '',
+      coindai: '',
+      error: false,
     }
   },
 
@@ -52,7 +61,18 @@ export default {
   },
 
   methods: {
+    checkFormBtc: function (e) {
+      if (this.coinbtc) {
+        return true;
+      }
 
+      this.errors = [];
+
+      if (!this.coinbtc) {
+        this.error = true;
+      }
+      e.preventDefault();
+    }
   }
 }
 </script>
