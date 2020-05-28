@@ -37,43 +37,4 @@ export default {
   float: left;
   object-fit: cover;
 }
-
-@media (max-width: 320px) {
-  .header {
-    height: 10vh;
-    font-size: 0.5em;
-  }
-
-  .image {
-    height: 10vh;
-  }
-}
-
-@media (min-width: 321px) {
-  .header {
-    height: 15vh;
-    font-size: 0.6em;
-  }
-
-  .image {
-    height: 15vh;
-  }
-}
-
-@media (min-width: 376px) {
-  .header {
-    height: 15vh;
-    font-size: 0.7em;
-  }
-
-  .image {
-    height: 15vh;
-  }
-}
-
-@media (min-width: 426px) {
-  .header {
-    font-size: 1em;
-  }
-}
 </style>
