@@ -7,36 +7,85 @@
         </button>
       </div>
 
-      <Cripto></Cripto>
+      <form class="form" v-on:submit.prevent="checkForm()">
+        <label class="label" for="btc">Elija la moneda</label>
+
+        <select class="select" id="btc" v-model="coin" name="btc">
+          <option>ARS</option>
+          <option>EUR</option>
+          <option>USD</option>
+        </select>
+
+        <input class="input" type="submit" value="Buscar precio" />
+
+        <p class="error" v-if="error">Debe elegir una moneda</p>
+      </form>
     </aside>
 
-    <div class="video-container">
+    <div class="data-container">
       <video
         controls
         class="video"
         v-if="type === 'video'"
         src="../assets/video.mp4"
       ></video>
+
+      <div class="cripto" v-if="type === 'cripto'">
+        <img class="image" src="../assets/cripto.jpg" />
+
+        <div v-if="coin === 'ARS'">
+          <p>El precio actual es: {{ info.ARS.PRICE }}</p>
+          <p>Fuente: {{ info.ARS.LASTMARKET }}</p>
+          <p>Ultima actualizacion: {{ info.ARS.LASTUPDATE }}</p>
+        </div>
+
+        <div v-if="coin === 'EUR'">
+          <p>El precio actual es: {{ info.EUR.PRICE }}</p>
+          <p>Fuente: {{ info.EUR.LASTMARKET }}</p>
+          <p>Ultima actualizacion: {{ info.EUR.LASTUPDATE }}</p>
+        </div>
+
+        <div v-if="coin === 'USD'">
+          <p>El precio actual es: {{ info.USD.PRICE }}</p>
+          <p>Fuente: {{ info.USD.LASTMARKET }}</p>
+          <p>Ultima actualizacion: {{ info.USD.LASTUPDATE }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 
-import Cripto from './Cripto';
+import axios from 'axios';
 
 export default {
   name: 'Sidebar',
 
-  data: function(){
-    return{
-      type:'',
+  data: function () {
+    return {
+      type: '',
+      coin: '',
+      error: false,
+      info: null,
     }
   },
 
-  components: {
-    Cripto,
-  },
+  methods: {
+    checkForm: function () {
+      if (!this.coin) {
+        this.error = true;
+      } else {
+        this.error = false,
+          axios
+            .get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=" + this.coin)
+            .then((response) => {
+              this.info = response.data.DISPLAY.BTC;
+            }),
+          this.type = 'cripto';
+      }
+    },
+  }
 }
 </script>
 
@@ -72,7 +121,32 @@ export default {
   cursor: pointer;
 }
 
-.video-container {
+.form {
+  margin-top: 30px;
+}
+
+.label {
+  margin: 10px;
+  color: white;
+}
+
+.select {
+  display: block;
+  margin: 10px;
+  width: 40%;
+}
+
+.input {
+  margin: 10px;
+  width: 90%;
+}
+
+.error {
+  color: red;
+  margin-left: 15px;
+}
+
+.data-container {
   width: 80%;
   height: 70vh;
   float: left;
@@ -86,5 +160,17 @@ export default {
   max-height: 80%;
   border: 3px solid black;
   border-radius: 5px;
+}
+
+.cripto {
+  max-width: 100%;
+  max-height: 80%;
+  font-size: large;
+  color: green;
+}
+
+.image {
+  width: 400px;
+  height: 200px;
 }
 </style>
