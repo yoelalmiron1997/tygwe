@@ -18,21 +18,59 @@ body {
 /*CABECERA*/
 
 .cabecera {
-	display: flex;
-	justify-content: left;
+	justify-content: center;
    	align-items: center;
    	line-height: 80px;
    	width: 100%;
 	background-color: rgba(0, 0, 0, 0.84);	
 	color: #fff;
 	opacity: 1;
-	font-size: 32px;
+	font-size: 20px;
 	font-weight: bold;
 	box-shadow: 0 10px 20px 10px rgba(0,0,0,0.5);
 }
-.enlace-cabecera{
-	font-size: 30px;
-	color:white;
+
+nav {
+	float: right;
+}
+nav a {
+	color: #fff;
+	padding: 10px 30px;
+	display: inline-block;
+	
+}
+nav a:hover{
+	color: #b93632;
+}
+
+/*SIDEBAR */
+.sidebar {
+	
+	width: 240px;
+	height: 100%;
+	background: #1e1e1e;
+	top: 0px;
+}
+
+.sidebar a {
+	display: block;
+	color: white;
+	height: 65px;
+	width: 100%;
+	padding-left: 30px;
+	border-bottom: 1px solid rgba(255, 255, 255, .1);
+	border-left: 5px solid transparent;
+	font-family: 'Open Sans', sans-serif;
+}
+
+#elemento-sidebar {
+	line-height: 32px;
+	font-size: 15px;
+}
+
+#elemento-sidebar:hover, #elemento-sidebar.active {
+	border-left: 5px solid #b93632;
+	color: #b93632;
 }
 
 /*FOOTER */
