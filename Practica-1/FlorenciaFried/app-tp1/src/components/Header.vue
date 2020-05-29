@@ -17,18 +17,15 @@ export default {
 
 <style scoped>
 .header {
-  width: 80%;
+  width: 79%;
   height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    90deg,
-    rgb(252, 252, 252) 0%,
-    rgb(110, 110, 110) 50%,
-    rgb(0, 0, 0) 100%
-  );
-  color: white;
+  background: white;
+  color: black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
 }
 
 .image {

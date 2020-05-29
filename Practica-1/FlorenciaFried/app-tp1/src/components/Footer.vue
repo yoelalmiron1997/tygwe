@@ -17,12 +17,8 @@ export default {
   height: 10vh;
   bottom: 0 !important;
   position: absolute;
-  background: linear-gradient(
-    90deg,
-    rgb(0, 0, 0) 0%,
-    rgb(110, 110, 110) 50%,
-    rgb(252, 252, 252) 100%
-  );
+  background: white;
+  border-top: 1px solid black;
 }
 .text {
   float: right;

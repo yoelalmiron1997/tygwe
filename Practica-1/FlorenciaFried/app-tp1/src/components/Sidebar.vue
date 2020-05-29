@@ -1,87 +1,55 @@
 <template>
-  <aside class="sidebar">
-    <div class="presentation">
-      <button class="button" v-on:click="type = 'video'">
-        VER PRESENTACIÓN
-      </button>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="presentation">
+        <button class="button" v-on:click="type = 'video'">
+          VER PRESENTACIÓN
+        </button>
+      </div>
+
+      <Cripto></Cripto>
+    </aside>
+
+    <div class="video-container">
+      <video
+        controls
+        class="video"
+        v-if="type === 'video'"
+        src="../assets/video.mp4"
+      ></video>
     </div>
-
-    <form class="form" @submit="checkForm()">
-      <div class="div">
-        <label class="label" for="btc">Elija la moneda</label>
-
-        <select class="select" id="btc" v-model="coinbtc" name="btc">
-          <option>ARS</option>
-          <option>EUR</option>
-          <option>USD</option>
-        </select>
-
-        <input class="input" type="submit" value="Buscar precio del Bitcoin" />
-      </div>
-
-        <p v-if="error">Debe elegir una opción</p>
-    </form>
-
-    <form class="form" @submit="checkFormDai()">
-      <div class="div">
-        <label class="label" for="dai">Elija la moneda</label>
-
-        <select class="select" id="dai" v-model="coindai" name="dai">
-          <option>ARS</option>
-          <option>EUR</option>
-          <option>USD</option>
-        </select>
-
-        <input class="input" type="submit" value="Buscar precio del Dai" />
-      </div>
-    </form>
-
-    <Principal :type="type"></Principal>
-  </aside>
+  </div>
 </template>
 
 <script>
 
-import Principal from './Principal';
+import Cripto from './Cripto';
 
 export default {
   name: 'Sidebar',
 
-  data: function () {
-    return {
-      type: ' ',
-      coinbtc: '',
-      coindai: '',
-      error: false,
+  data: function(){
+    return{
+      type:'',
     }
   },
 
   components: {
-    Principal,
+    Cripto,
   },
-
-  methods: {
-    checkFormBtc: function (e) {
-      if (this.coinbtc) {
-        return true;
-      }
-
-      this.errors = [];
-
-      if (!this.coinbtc) {
-        this.error = true;
-      }
-      e.preventDefault();
-    }
-  }
 }
 </script>
 
 <style scoped>
+.container {
+  width: 100%;
+  height: 70vh;
+}
+
 .sidebar {
   width: 20%;
-  background-color: #f7c2fe;
-  height: 70vh;
+  background-color: black;
+  height: 100%;
   color: #fff;
   float: left;
   padding-top: 30px;
@@ -93,7 +61,7 @@ export default {
 }
 
 .button {
-  background-color: rgb(38, 29, 46);
+  background-color: black;
   color: #fff;
   padding: 20px;
   margin: 10px;
@@ -104,24 +72,19 @@ export default {
   cursor: pointer;
 }
 
-.div {
-  margin-top: 40px;
-  margin-left: 5px;
+.video-container {
+  width: 80%;
+  height: 70vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.label {
-  margin: 5px;
-  color: black;
-}
-
-.select {
-  display: block;
-  margin: 5px;
-  width: 40%;
-}
-
-.input {
-  margin: 5px;
-  width: 90%;
+.video {
+  max-width: 100%;
+  max-height: 80%;
+  border: 3px solid black;
+  border-radius: 5px;
 }
 </style>
