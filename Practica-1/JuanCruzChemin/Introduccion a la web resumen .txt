@@ -1,0 +1,43 @@
+Origen de la web: maquina de memex, organizacion de elementos
+La web aparece en los '80, Tim Bernasle. Protocolo http y html.
+Web funciona sobre internet
+
+
+Hipertexto: texto con enlaces
+Hiperlink: una o varias palabras con referencia a otra información que se puede acceder directamente.
+ La web es uno de los servicios que funcionan sobre internet y se la considera una interface para utilizar la red
+
+Un protocolo es un conjunto de normas que permite el intercambio de información entre máquinas de diversos tipos conec­tadas entre sí
+
+ FTP (para la transferencia de archivos), POP y SMTP (para el envío y recepción de correo electrónico), TELNET (para la conexión con terminales remotos), GOPHER, WAIS y HTTP (para el acceso a servidores de información). 
+El protocolo HTTP (HyperText Transfer Protocol) es la base de la World Wide Web
+
+Web1.0 se refiere a los orígenes de la web, y se lo sitúa por los años 1994 al 1997
+
+Web 1.0 caracteristicas:
+-Páginas estáticas: la informacion se queda
+-Uso de framesets: importar varias paginas en una
+-Contadores de visitas
+-Botones gif
+-Web master: subia ediciones
+
+Web 1.5: entre 1997 y 2003. Se dio por un cambio tecnologico
+Caracteristicas:
+-Paginas dinamicas: diferentes resultados dependiendo de los factores
+-Aparece php, asp, jsp
+-Email
+-Lenguajes cliente servidor
+-Base de datos
+-Todavia no hay interaccion de usuario
+
+
+Web 2.0 
+-Rol principal de productor y consumidor
+-La web como plataforma
+-No esta asociado a un solo dispositivo
+-Experiencias enriquesedoras de usarios
+-Cambia por como se aprovecha 
+
+Web 3.0
+-Web semantica: etiquetas 
+-Realidad aumentada
