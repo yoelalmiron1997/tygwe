@@ -16,7 +16,7 @@
           <option>USD</option>
         </select>
 
-        <input class="input" type="submit" value="Buscar precio" />
+        <input class="input" type="submit" value="Buscar precio del Bitcoin" />
 
         <p class="error" v-if="error">Debe elegir una moneda</p>
       </form>
@@ -24,6 +24,7 @@
 
     <div class="data-container">
       <video
+        autoplay
         controls
         class="video"
         v-if="type === 'video'"
@@ -64,7 +65,7 @@ export default {
 
   data: function () {
     return {
-      type: '',
+      type: 'video',
       coin: '',
       error: false,
       info: null,
@@ -97,7 +98,6 @@ export default {
 
 .sidebar {
   width: 20%;
-  background-color: black;
   height: 100%;
   color: #fff;
   float: left;
@@ -111,7 +111,7 @@ export default {
 
 .button {
   background-color: black;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 20px;
   margin: 10px;
   border-radius: 40px;
@@ -123,11 +123,12 @@ export default {
 
 .form {
   margin-top: 30px;
+  margin-left: 10px;
 }
 
 .label {
   margin: 10px;
-  color: white;
+  color: rgb(87, 99, 207);
 }
 
 .select {

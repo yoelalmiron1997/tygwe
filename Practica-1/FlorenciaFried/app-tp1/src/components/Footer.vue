@@ -17,8 +17,7 @@ export default {
   height: 10vh;
   bottom: 0 !important;
   position: absolute;
-  background: white;
-  border-top: 1px solid black;
+  background-color: rgb(231, 231, 231);
 }
 .text {
   float: right;

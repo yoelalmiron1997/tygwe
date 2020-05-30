@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
-    <img class="image" src="../assets/logo.png" />
+<div>
+    <div class="image-container">
+      <img class="image" src="../assets/logo.jpg" />
+    </div>
 
     <header class="header">
       <h1 class="text">TP N°1 --- Florencia Fried</h1>
     </header>
-  </div>
+</div>
 </template>
 
 <script>
@@ -17,21 +19,27 @@ export default {
 
 <style scoped>
 .header {
-  width: 79%;
+  width: 80%;
   height: 20vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background: white;
-  color: black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
+  color: rgb(0, 0, 0);
+  float: right;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20vh;
+  width: 20%;
+    float: left;
+
 }
 
 .image {
-  width: 20%;
   height: 20vh;
-  float: left;
-  object-fit: cover;
 }
 </style>
