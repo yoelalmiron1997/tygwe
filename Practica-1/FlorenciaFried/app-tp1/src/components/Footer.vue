@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <h2 class="text">Tecnología y Gestión Web - 2020</h2>
+    <p class="text">Tecnología y Gestión Web - 2020</p>
   </footer>
 </template>
 
@@ -22,5 +22,7 @@ export default {
 .text {
   float: right;
   margin-right: 20px;
+  font-size: x-large;
+  font-weight: bold;
 }
 </style>

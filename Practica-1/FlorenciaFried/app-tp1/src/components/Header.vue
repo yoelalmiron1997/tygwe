@@ -1,13 +1,13 @@
 <template>
-<div>
+  <header>
     <div class="image-container">
       <img class="image" src="../assets/logo.jpg" />
     </div>
 
-    <header class="header">
+    <div class="text-container">
       <h1 class="text">TP N°1 --- Florencia Fried</h1>
-    </header>
-</div>
+    </div>
+  </header>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style scoped>
-.header {
+.text-container {
   width: 80%;
   height: 20vh;
   display: flex;
@@ -35,8 +35,7 @@ export default {
   justify-content: center;
   height: 20vh;
   width: 20%;
-    float: left;
-
+  float: left;
 }
 
 .image {

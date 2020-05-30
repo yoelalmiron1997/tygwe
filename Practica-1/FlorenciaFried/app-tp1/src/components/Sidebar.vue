@@ -22,7 +22,10 @@
       </form>
     </aside>
 
-    <div class="data-container">
+    <section class="data-container">
+      {{phraseRandom()}}
+      <p class="phrase">Frase: "{{ phrases[number] }}"</p>
+
       <video
         autoplay
         controls
@@ -52,7 +55,7 @@
           <p>Ultima actualizacion: {{ info.USD.LASTUPDATE }}</p>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -69,6 +72,8 @@ export default {
       coin: '',
       error: false,
       info: null,
+      number: 0,
+      phrases: ['hola', 'hola1', 'hola2'],
     }
   },
 
@@ -86,6 +91,11 @@ export default {
           this.type = 'cripto';
       }
     },
+
+    phraseRandom: function () {
+      console.log(this.number);
+      this.number = Math.floor(Math.random() * (3));
+    }
   }
 }
 </script>
