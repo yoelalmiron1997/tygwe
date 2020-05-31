@@ -23,7 +23,7 @@
     </aside>
 
     <section class="data-container">
-      {{phraseRandom()}}
+      {{ phraseRandom() }}
       <p class="phrase">Frase: "{{ phrases[number] }}"</p>
 
       <video
@@ -73,7 +73,9 @@ export default {
       error: false,
       info: null,
       number: 0,
-      phrases: ['hola', 'hola1', 'hola2'],
+      phrases: ['Son nuestras elecciones las que muestran lo que somos, mucho más que nuestras habilidades.',
+        'Nuestras vidas no sólo se miden en años, se miden en las vidas de aquellos que impactamos.',
+        'Una mente necesita de los libros igual que una espada de una piedra de amoldar, para conservar el filo.'],
     }
   },
 
