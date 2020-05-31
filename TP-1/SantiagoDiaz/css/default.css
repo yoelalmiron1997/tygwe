@@ -50,3 +50,20 @@ footer{
     align-items:center;
 	border-top: solid 1px #aaa;
 }
+ul.botones{
+	display:table;
+}
+ul.botones li{
+	display:block;
+	border-radius:5px;
+	border: 1px solid;
+	margin-bottom:10px;
+	padding:10px;
+	background-color:#ff5555;
+	width:200px,
+	height:20px;
+}
+
+ul.botones li:hover{
+	background-color:blue;
+}
