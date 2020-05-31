@@ -2,7 +2,11 @@ import React from "react";
 import Proyecto from "./Proyecto";
 
 const Listado = () => {
-  const proyectos = [{ nombre: "Link 1" }, { nombre: "Link 2" }];
+  const proyectos = [
+    { nombre: "Link 1" },
+    { nombre: "Link 2" },
+    { nombre: "Link 3" },
+  ];
 
   return (
     <ul className="listado-proyectos">

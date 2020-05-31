@@ -13,7 +13,13 @@ const ListadoTareas = () => {
   const randomSombras = sombras[Math.floor(Math.random() * sombras.length)];
 
   const proyectosContext = useContext(proyectoContext);
-  const { formulario, proyectos, linkone, linktwo } = proyectosContext;
+  const {
+    formulario,
+    proyectos,
+    linkone,
+    linktwo,
+    linkthree,
+  } = proyectosContext;
 
   return (
     <Fragment>
@@ -80,6 +86,37 @@ const ListadoTareas = () => {
           }
         </ul>
       ) : null}
+
+      {
+        //meto mi api que hice la vuelta del examen de la utn ba
+        linkthree ? (
+          <ul className="listado-tareas">
+            <li className="tarea">Agenda de Contactos</li>
+            {
+              proyectos.map((item) => (
+                <li className="tarea">
+                  Nombre:{item.nombre}
+                  <br></br>
+                  Apellido:{item.apellido}
+                  <br></br>
+                  Telefono:{item.Telefono}
+                  <br></br>
+                  email:{item.email}
+                  <br></br>
+                  ciudad:{item.ciudad}
+                  <br></br>
+                  Provincia:{item.Provincia}
+                  <br></br>
+                  Ciudad:{item.Ciudad}
+                  <br></br>
+                </li>
+              )) /* console.log(
+              proyectos.response.posts
+            ) */
+            }
+          </ul>
+        ) : null
+      }
     </Fragment>
   );
 };

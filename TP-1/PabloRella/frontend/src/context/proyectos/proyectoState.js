@@ -6,6 +6,7 @@ import {
   FORMULARIO_PROYECTO,
   LINKONE,
   LINKTWO,
+  LINKTHREE,
   PROYECTO_ERROR,
 } from "../../types";
 import clienteAxios from "../../config/axios";
@@ -15,6 +16,7 @@ const ProyectoState = (props) => {
     formulario: true,
     linkone: false,
     linktwo: false,
+    linkthree: false,
     proyectos: [],
   };
   //Dispatch para ejecutar las acciones
@@ -37,6 +39,11 @@ const ProyectoState = (props) => {
       type: LINKTWO,
     });
   };
+  const mostrarLinkthree = () => {
+    dispatch({
+      type: LINKTHREE,
+    });
+  };
 
   // Obtener los proyectos
   const obtenerProyectos = async (quienfue) => {
@@ -50,6 +57,12 @@ const ProyectoState = (props) => {
         var resultado = await clienteAxios.get(
           /*           "https://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com" */
           "https://api.tumblr.com/v2/blog/luisonte.tumblr.com/posts?api_key=jzul98NG20pE3lb5HV84Jacl7mJopeDSdBkdfNCoOijJKahORb"
+        );
+      }
+      if (quienfue === "LINKTHREE") {
+        var resultado = await clienteAxios.get(
+          /*           "https://cors-anywhere.herokuapp.com/https://api.domainsdb.info/v1/domains/search?domain=facebook&zone=com" */
+          "https://cors-anywhere.herokuapp.com/https://agenda-nodejs-final.herokuapp.com/contactos"
         );
       }
       dispatch({
@@ -76,9 +89,11 @@ const ProyectoState = (props) => {
         proyectos: state.proyectos,
         linkone: state.linkone,
         linktwo: state.linktwo,
+        linkthree: state.linkthree,
         mostrarFormulario,
         mostrarLinkone,
         mostrarLinktwo,
+        mostrarLinkthree,
         obtenerProyectos,
       }}
     >
