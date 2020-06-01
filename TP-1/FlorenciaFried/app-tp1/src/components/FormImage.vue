@@ -9,6 +9,9 @@
 </template>
 
 <script>
+
+import axios from 'axios';
+
 export default {
   name: 'FormImage',
 
@@ -16,6 +19,7 @@ export default {
     return {
       type: '',
       error: false,
+      info: '',
       search: '',
     }
   },
@@ -25,9 +29,16 @@ export default {
       if (!this.search) {
         this.error = true;
       } else {
-        this.error = false;
-        this.type = 'images';
-        this.$emit('imagesCompleted', this.type);
+        this.error = false
+
+        axios
+          .get("https://pixabay.com/api/?key=16094236-f670de1bcfeac43a48ed4e5b5&q=" + this.search + "&per_page=6")
+          .then((response) => {
+            this.info = response.data.hits
+          })
+
+        this.type = 'images'
+        this.$emit('imagesCompleted', this.type, this.info);
       }
     },
   }

@@ -17,12 +17,10 @@
 
       <Cripto v-if="type === 'cripto'" :coin="coin" :info="info"></Cripto>
 
-      <Images v-if="type === 'images'"></Images>
+      <Images v-if="type === 'images'" :info="info"></Images>
     </section>
   </div>
 </template>
-
-https://pixabay.com/api/?key="16094236-f670de1bcfeac43a48ed4e5b5"&q=${search}&per_page=6
 
 <script>
 
@@ -60,10 +58,10 @@ export default {
       this.info = info;
     },
 
-    setValuesImages: function (type) {
+    setValuesImages: function (type, info) {
       this.type = type;
-      console.log(this.type);
-    }
+      this.info = info;
+    },
   }
 }
 </script>
