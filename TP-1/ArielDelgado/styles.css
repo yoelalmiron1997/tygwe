@@ -1,0 +1,62 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	font-family: Segoe UI, Calibri, Verdana, Tahoma;
+	text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+   
+}
+
+body {
+    background-color: #eee;
+   
+}
+
+/*CABECERA*/
+
+.cabecera {
+	display: flex;
+	justify-content: left;
+   	align-items: center;
+   	line-height: 80px;
+   	width: 100%;
+	background-color: rgba(0, 0, 0, 0.84);	
+	color: #fff;
+	opacity: 1;
+	font-size: 32px;
+	font-weight: bold;
+	box-shadow: 0 10px 20px 10px rgba(0,0,0,0.5);
+}
+.enlace-cabecera{
+	font-size: 30px;
+	color:white;
+}
+
+/*FOOTER */
+
+footer{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.84);
+    box-shadow: 0 10px 20px 10px rgba(0,0,0,0.5);
+	color: #fff;
+    line-height: 35px;
+    opacity: 1;
+    position: fixed;
+    bottom: 0;
+}
+#elemento-footer {
+	padding: 0px;
+    min-width: 100px;
+}
+
+#fotito{
+	height: 10%;
+	width: 10%;
+	max-width: 72px;
+	max-height: 72px;
+	min-width: 18px;
+	min-height: 18px;
+}
