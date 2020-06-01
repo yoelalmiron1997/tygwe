@@ -8,6 +8,7 @@ const Proyecto = ({ proyecto }) => {
     formulario,
     mostrarLinkone,
     mostrarLinktwo,
+    mostrarLinkthree,
     obtenerProyectos,
   } = proyectosContext;
 
@@ -30,6 +31,15 @@ const Proyecto = ({ proyecto }) => {
           type="button"
           className="btn btn-blank"
           onClick={() => obtenerProyectos("LINKTWO")}
+        >
+          {proyecto.nombre}
+        </button>
+      ) : null}
+      {proyecto.nombre === "Link 3" ? (
+        <button
+          type="button"
+          className="btn btn-blank"
+          onClick={() => obtenerProyectos("LINKTHREE")}
         >
           {proyecto.nombre}
         </button>
