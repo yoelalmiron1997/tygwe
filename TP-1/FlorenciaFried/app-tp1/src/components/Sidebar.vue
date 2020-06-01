@@ -16,14 +16,18 @@
           <option>USD</option>
         </select>
 
-        <input class="input" type="submit" value="Buscar precio" />
+        <input class="input" type="submit" value="Buscar precio del Bitcoin" />
 
         <p class="error" v-if="error">Debe elegir una moneda</p>
       </form>
     </aside>
 
-    <div class="data-container">
+    <section class="data-container">
+      {{ phraseRandom() }}
+      <p class="phrase">Frase: "{{ phrases[number] }}"</p>
+
       <video
+        autoplay
         controls
         class="video"
         v-if="type === 'video'"
@@ -51,7 +55,7 @@
           <p>Ultima actualizacion: {{ info.USD.LASTUPDATE }}</p>
         </div>
       </div>
-    </div>
+    </section>
   </div>
 </template>
 
@@ -64,10 +68,14 @@ export default {
 
   data: function () {
     return {
-      type: '',
+      type: 'video',
       coin: '',
       error: false,
       info: null,
+      number: 0,
+      phrases: ['Son nuestras elecciones las que muestran lo que somos, mucho más que nuestras habilidades.',
+        'Nuestras vidas no sólo se miden en años, se miden en las vidas de aquellos que impactamos.',
+        'Una mente necesita de los libros igual que una espada de una piedra de amoldar, para conservar el filo.'],
     }
   },
 
@@ -85,6 +93,11 @@ export default {
           this.type = 'cripto';
       }
     },
+
+    phraseRandom: function () {
+      console.log(this.number);
+      this.number = Math.floor(Math.random() * (3));
+    }
   }
 }
 </script>
@@ -97,7 +110,6 @@ export default {
 
 .sidebar {
   width: 20%;
-  background-color: black;
   height: 100%;
   color: #fff;
   float: left;
@@ -111,7 +123,7 @@ export default {
 
 .button {
   background-color: black;
-  color: #fff;
+  color: rgb(255, 255, 255);
   padding: 20px;
   margin: 10px;
   border-radius: 40px;
@@ -123,11 +135,12 @@ export default {
 
 .form {
   margin-top: 30px;
+  margin-left: 10px;
 }
 
 .label {
   margin: 10px;
-  color: white;
+  color: rgb(87, 99, 207);
 }
 
 .select {
