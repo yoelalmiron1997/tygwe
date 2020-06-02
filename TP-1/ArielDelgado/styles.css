@@ -11,53 +11,52 @@ html {
 }
 
 body {
-    background-color: #eee;
-   
+	background-image: url("media/elder.gif");
+	position: relative;
+	min-height: 100vh;
+	
 }
 
 /*CABECERA*/
 
 .cabecera {
-	justify-content: center;
-   	align-items: center;
-   	line-height: 80px;
    	width: 100%;
 	background-color: rgba(0, 0, 0, 0.84);	
 	color: #fff;
-	opacity: 1;
-	font-size: 20px;
-	font-weight: bold;
 	box-shadow: 0 10px 20px 10px rgba(0,0,0,0.5);
+	font-size: 10px;
+	padding-top: 0px;
+	font-weight: bold;
+	bottom: 0px;
 }
 
-nav {
-	float: right;
+#logo{
+	margin-left: 80px;
+	height: 100px;
 }
-nav a {
-	color: #fff;
-	padding: 10px 30px;
-	display: inline-block;
-	
-}
-nav a:hover{
-	color: #b93632;
-}
+
+
 
 /*SIDEBAR */
+
 .sidebar {
-	
+	padding-top: 0px;
 	width: 240px;
-	height: 100%;
-	background: #1e1e1e;
-	top: 0px;
+	height: 50%;
+	list-style: none;
+	position: absolute;
+	z-index: 1;
+	left:0;
+	overflow-x: hidden;
+	background-color: rgba(0, 0, 0, 0.84);
+	height: 521px;
+	
 }
 
 .sidebar a {
 	display: block;
 	color: white;
-	height: 65px;
-	width: 100%;
-	padding-left: 30px;
+	text-align: center;
 	border-bottom: 1px solid rgba(255, 255, 255, .1);
 	border-left: 5px solid transparent;
 	font-family: 'Open Sans', sans-serif;
@@ -66,11 +65,55 @@ nav a:hover{
 #elemento-sidebar {
 	line-height: 32px;
 	font-size: 15px;
+	padding: 20px 5px;
 }
 
 #elemento-sidebar:hover, #elemento-sidebar.active {
 	border-left: 5px solid #b93632;
 	color: #b93632;
+	cursor: pointer;
+}
+
+/*FRASES*/
+
+.frase1 {
+	text-shadow: 5px 5px 5px #FE0000;
+	float: center;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+.frase2 {
+	text-shadow: 5px 5px 5px #FFFB00;
+	float: center;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+.frase3 {
+	text-shadow: 5px 5px 5px #F9BCF9;
+	text-align: center;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	color: white;
+	font-size: 20px;
+}
+
+.conteiner {
+	width: 500px;
+	height: auto;
+	margin-left: 650px;
+}
+
+embed {
+	width: auto;
+	height: 300px;
 }
 
 /*FOOTER */
@@ -80,21 +123,60 @@ footer{
     background-color: rgba(0, 0, 0, 0.84);
     box-shadow: 0 10px 20px 10px rgba(0,0,0,0.5);
 	color: #fff;
-    line-height: 35px;
-    opacity: 1;
-    position: fixed;
-    bottom: 0;
-}
-#elemento-footer {
-	padding: 0px;
-    min-width: 100px;
+    line-height: 30px;
+	text-align: right;
+	padding-top: 40px;
+	font-size: 20px;
+	position: relative;
+	bottom: 0px;
+	margin-bottom: 0;
+	clear:both;
+
 }
 
-#fotito{
-	height: 10%;
-	width: 10%;
-	max-width: 72px;
-	max-height: 72px;
-	min-width: 18px;
-	min-height: 18px;
+.libros{
+	display: flex;
+	width: 600px;
+	margin: auto;
+	visibility: hidden;
+	
+}
+.contenedorlibro{
+	border:1px solid #333333;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.84);
+	text-align: center;
+	width: 300px;
+	color: white;
+}
+
+.pokemon-list{
+	display: grid;
+	grid-template-columns: 1fr 100px 1fr;
+	max-width: 800px;
+	margin: auto;
+	color: white;
+	visibility: hidden;
+	padding-top: 5px;
+	margin-bottom: 50px;
+}
+
+.pokemon {
+	border: 1px solid #333;
+	padding: 10px;
+	background-color: rgba(0, 0, 0, 0.84);
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.vs {
+	text-align: center;
+	margin: auto;
+	font-size: 32px;
+	color: white;
+	visibility: hidden;
+}
+
+.imagen {
+	width: 60%;
 }
