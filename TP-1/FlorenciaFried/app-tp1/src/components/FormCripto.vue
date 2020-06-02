@@ -44,7 +44,7 @@ export default {
 
     callToApi: async function () {
       await axios
-        .get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=" + this.coin)
+        .get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsym=" + this.coin)
         .then((response) => {
           this.info = response.data.DISPLAY.BTC
         })

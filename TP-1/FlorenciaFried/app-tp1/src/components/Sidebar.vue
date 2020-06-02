@@ -19,7 +19,8 @@
         Ha acurrido un error, no se puede mostrar el precio.
       </p>
 
-      <div v-if="type === 'cripto'">
+      <div v-if="type === 'cripto' && errorCoin === false">
+        {{ changeValueErrorImages() }}
         <Cripto :coin="coin" :info="info"></Cripto>
       </div>
 
@@ -27,7 +28,8 @@
         Ha acurrido un error, no se pueden mostrar las imagenes.
       </p>
 
-      <div v-if="type === 'images'">
+      <div v-if="type === 'images' && errorImages === false">
+        {{ changeValueErrorCoin() }}
         <Images :info="info"></Images>
       </div>
     </section>
@@ -78,6 +80,14 @@ export default {
       this.info = info;
       this.errorImages = error;
     },
+
+    changeValueErrorCoin: function () {
+      this.errorCoin = false;
+    },
+
+    changeValueErrorImages: function () {
+      this.errorImages = false;
+    }
   }
 }
 </script>

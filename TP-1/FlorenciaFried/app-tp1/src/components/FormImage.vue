@@ -39,7 +39,7 @@ export default {
 
     callToApi: async function () {
       await axios
-        .get("https://pixabay.com/api/?key=16094236-f670de1bcfeac43a48ed4e5b5&q=" + this.search + "&per_page=6")
+        .get("https://pixabay.com/ap/?key=16094236-f670de1bcfeac43a48ed4e5b5&q=" + this.search + "&per_page=6")
         .then((response) => {
           this.info = response.data.hits
         })
@@ -47,8 +47,8 @@ export default {
           console.log(error)
           this.errorAPI = true
         })
-      this.$emit('imagesCompleted', this.info, this.type, this.errorAPI);
 
+      this.$emit('imagesCompleted', this.info, this.type, this.errorAPI);
     },
   }
 }
