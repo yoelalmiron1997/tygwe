@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.section{
+  flex: 1 0 auto;
+}
+.footer {
+    padding: 1rem !important;
+    background-color: #efefef !important;
+}
+video {
+    margin-top: 1.5rem;
+}
+
+.videoyoutube {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}

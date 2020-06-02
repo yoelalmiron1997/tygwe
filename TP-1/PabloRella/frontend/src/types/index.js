@@ -1,0 +1,6 @@
+export const FORMULARIO_PROYECTO = "FORMULARIO_PROYECTO";
+export const LINKONE = "LINKONE";
+export const LINKTWO = "LINKTWO";
+export const LINKTHREE = "LINKTHREE";
+export const OBTENER_PROYECTOS = "OBTENER_PROYECTOS";
+export const PROYECTO_ERROR = "PROYECTO_ERROR";
