@@ -1,5 +1,5 @@
 <template>
-  <form class="form" v-on:submit.prevent="checkForm()">
+  <form id="FormImage" class="form" @submit.prevent="checkForm">
     <input class="label" v-model="search" placeholder="Buscar imagenes de..." />
 
     <input class="input" type="submit" value="Buscar" />
@@ -19,8 +19,9 @@ export default {
     return {
       type: '',
       error: false,
-      info: '',
+      info: null,
       search: '',
+      errorAPI: false,
     }
   },
 
@@ -30,16 +31,24 @@ export default {
         this.error = true;
       } else {
         this.error = false
-
-        axios
-          .get("https://pixabay.com/api/?key=16094236-f670de1bcfeac43a48ed4e5b5&q=" + this.search + "&per_page=6")
-          .then((response) => {
-            this.info = response.data.hits
-          })
-
         this.type = 'images'
-        this.$emit('imagesCompleted', this.type, this.info);
+
+        this.callToApi()
       }
+    },
+
+    callToApi: async function () {
+      await axios
+        .get("https://pixabay.com/api/?key=16094236-f670de1bcfeac43a48ed4e5b5&q=" + this.search + "&per_page=6")
+        .then((response) => {
+          this.info = response.data.hits
+        })
+        .catch((error) => {
+          console.log(error)
+          this.errorAPI = true
+        })
+      this.$emit('imagesCompleted', this.info, this.type, this.errorAPI);
+
     },
   }
 }

@@ -15,9 +15,21 @@
     <section class="data-container">
       <Presentation v-if="type === 'video'"></Presentation>
 
-      <Cripto v-if="type === 'cripto'" :coin="coin" :info="info"></Cripto>
+      <p v-if="errorCoin" class="error">
+        Ha acurrido un error, no se puede mostrar el precio.
+      </p>
 
-      <Images v-if="type === 'images'" :info="info"></Images>
+      <div v-if="type === 'cripto'">
+        <Cripto :coin="coin" :info="info"></Cripto>
+      </div>
+
+      <p v-if="errorImages" class="error">
+        Ha acurrido un error, no se pueden mostrar las imagenes.
+      </p>
+
+      <div v-if="type === 'images'">
+        <Images :info="info"></Images>
+      </div>
     </section>
   </div>
 </template>
@@ -48,19 +60,23 @@ export default {
       info: null,
       number: 0,
       search: '',
+      errorCoin: false,
+      errorImages: false,
     }
   },
 
   methods: {
-    setValuesCripto: function (type, coin, info) {
+    setValuesCripto: function (type, coin, info, error) {
       this.type = type;
       this.coin = coin;
       this.info = info;
+      this.errorCoin = error;
     },
 
-    setValuesImages: function (type, info) {
+    setValuesImages: function (info, type, error) {
       this.type = type;
       this.info = info;
+      this.errorImages = error;
     },
   }
 }
@@ -101,5 +117,11 @@ export default {
   width: 80%;
   height: 70vh;
   float: left;
+}
+
+.error {
+  text-align: center;
+  font-size: large;
+  color: red;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <form class="form" v-on:submit.prevent="checkForm()">
+  <form id="FormCripto" class="form" @submit.prevent="checkForm">
     <label class="label" for="btc">Elija la moneda</label>
 
     <select class="select" id="btc" v-model="coin" name="btc">
@@ -25,8 +25,9 @@ export default {
     return {
       type: '',
       coin: '',
-      info: '',
+      info: null,
       error: false,
+      errorAPI: false,
     }
   },
 
@@ -35,20 +36,28 @@ export default {
       if (!this.coin) {
         this.error = true;
       } else {
-        this.error = false,
-          axios
-            .get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=" + this.coin)
-            .then((response) => {
-              this.info = response.data.DISPLAY.BTC;
-            }),
-
-          this.type = 'cripto',
-
-          this.$emit('criptoCompleted', this.type, this.coin, this.info);
+        this.error = false
+        this.type = 'cripto'
+        this.callToApi()
       }
     },
-  }
+
+    callToApi: async function () {
+      await axios
+        .get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=" + this.coin)
+        .then((response) => {
+          this.info = response.data.DISPLAY.BTC
+        })
+        .catch((error)=>{
+          console.log(error)
+          this.errorAPI = true
+        })
+
+      this.$emit('criptoCompleted', this.type, this.coin, this.info, this.errorAPI);
+    },
+  },
 }
+
 </script>
 
 <style scoped>
