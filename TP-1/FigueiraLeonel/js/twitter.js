@@ -80,19 +80,37 @@ function traerTweets() {
     success: function (tuits) {
       console.log(tuits);
       let output = "";
+      let pag = "";
       $.each(tuits, (index, tuit) => {
-        output += `
-                <div class="jumbotron jumbotron-fluid" id="${index}"  >
-                  <div class="container"  >
-                      <h1 class="display-4">${tuit.user.name}</h1>
-                      <p class="lead">${tuit.text}</p>
-                      <p>${tuit.created_at}</p>
+        //console.log(tuit.id_str);
+        let pag = "https://twitter.com/i/web/status/" + tuit.id_str;
+        //console.log(pag);
 
-                      <img style="width: 100%;" src="${tuit.user.profile_banner_url}">
-                  </div>
-                </div>
-       <br> <br>
+        output += `
+        <div class="jumbotron jumbotron-fluid" id="${index}">
+        <div class="container">
+    
+            <img style="width: 100%;" src="${tuit.user.profile_banner_url}">
+            <br>
+            <br>
+
+            <div class="well text-center">
+            
+                <h1 style="color:red; font-weight: bold; font-family:cursive;">${tuit.user.name}</h1>
+           
+                <p class="lead">${tuit.text}</p>
+                
+                <p>${tuit.created_at}</p>
+            </div>
+    
+            
+            <br>
+            <a href="${pag}" target="_blank" class="btn btn-danger">Ver en Twiiter</a>
+        </div>
+    </div>
+    <br> <br>
               `;
+
       });
       // console.log(output);
       $("#tweets").html(output);
@@ -102,13 +120,13 @@ function traerTweets() {
       console.log(req, status, err);
       let output = "";
       output += `
-            <div class="col-md-12">
-              <div class="well text-center">
-                <h5>No hay tuits para mostrar con los datos buscados</h5>
-              </div>
-            </div>
-          `;
-      $("#tweets").html(output);
+      <div class="col-md-12">
+        <div class="well text-center">
+            <h5>No hay tuits para mostrar con los datos buscados</h5>
+        </div>
+      </div>
+  `;
+  $("#tweets").html(output);
     },
   });
 }
