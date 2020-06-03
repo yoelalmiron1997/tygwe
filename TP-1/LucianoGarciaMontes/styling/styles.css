@@ -8,16 +8,6 @@ body{
     background-attachment: fixed;
 }
 
-
-#global{
-    width: 65%;
-    margin: 0px auto;
-    margin-top: 30px;
-    padding: 25px;
-    background: white;
-    box-shadow: 0px 0px 2px gray;
-}
-
 header{
     text-align: center;
     font-family: 'Segoe UI', Arial;
@@ -27,20 +17,12 @@ header{
     margin-bottom: 20px;
     border-bottom: 2px solid gray;
 }
+
 header img{
     height: 70px;
     width: 70px;
     float: left;
     margin-bottom: 20px;
-}
-
-.clearfix{
-    float: none;
-    clear: both;
-}
-
-#principal{
-    float: right;
 }
 
 footer{
@@ -57,6 +39,27 @@ footer{
     line-height: 47px;
 }
 
+tr, td, th{
+    border: 1px solid black;
+    padding: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Estilo para las IDs*/
+
+#global{
+    width: 70%;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    box-shadow: 0px 0px 2px gray;
+}
+
+#principal{
+    float: right;
+}
+
 #fraseAleatoria{
     margin: auto;
     width: 450px;
@@ -65,10 +68,16 @@ footer{
     border: 2px solid gray;
     visibility: hidden;
     margin-top: 10px;
+    margin-bottom: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 25px;
     text-align: center;
+}
+
+#barra{
+    margin-top: 30px;
+    border-bottom: 2px solid grey;
 }
 
 #contenido{
@@ -80,6 +89,7 @@ footer{
     width: 25%;
     float: left;
     background: #e3e3e3;
+    height: 100vh;
 }
 
 #contenido #sidebar h4{
@@ -99,6 +109,44 @@ footer{
     margin-bottom: 10px;
 }
 
+#principal{
+    float: right;
+    text-align: center;
+    padding-right: 30%;
+}
+
+#contenido #principal #titFrase{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#principal video{
+    margin: auto;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+    background: #d3d3d3;
+}
+
+#principal .coronavirus{
+    margin: auto;
+    border-radius: 10px;
+    border: 2px solid gray;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    text-align: center;
+    background: lightgreen;
+    position: absolute;
+}
+
+/*Estilo para las clases*/
+
 .frase0{
     text-shadow: 5px 5px 10px blue;
 }
@@ -117,25 +165,17 @@ footer{
     text-shadow: 5px 5px 10px purple;
 }
 
-#principal{
-    float: right;
-    text-align: center;
-    padding-right: 30%;
+.tablacorona{
+    border-collapse: collapse;
+    margin: 10px;
 }
 
-#contenido #principal #titFrase{
-    font-family: Arial, Helvetica, sans-serif;
+.fotoperro img{
+    height: 400px;
+    width: 600px;
 }
 
-#principal video{
-    margin: auto;
-    width: 300px;
-    border-radius: 10px;
-    border: 2px solid gray;
-    margin-top: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 25px;
-    text-align: center;
-    background: #d3d3d3;
+.clearfix{
+    float: none;
+    clear: both;
 }
