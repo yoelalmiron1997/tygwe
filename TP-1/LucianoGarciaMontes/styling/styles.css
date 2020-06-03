@@ -61,16 +61,16 @@ tr, td, th{
 }
 
 #fraseAleatoria{
-    margin: auto;
-    width: 450px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 525px;
     height: 50px;
-    border-radius: 10px;
-    border: 2px solid gray;
+    border-radius: 5px;
+    border: 2px solid black;
     visibility: hidden;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     font-size: 25px;
     text-align: center;
 }
@@ -122,20 +122,19 @@ tr, td, th{
 #principal video{
     margin: auto;
     width: 300px;
-    border-radius: 10px;
+    border-radius: 5px;
     border: 2px solid gray;
-    margin-top: 5px;
     padding-top: 10px;
     padding-bottom: 10px;
     font-size: 25px;
-    text-align: center;
-    background: #d3d3d3;
+    background: black;
 }
 
 #principal .coronavirus{
+    font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    border-radius: 10px;
-    border: 2px solid gray;
+    border-radius: 5px;
+    border: 2px solid green;
     margin-top: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
