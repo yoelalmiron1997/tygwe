@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Trabajo Práctico 1</title>
+        <!--Relacionado a JS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/codigo.js"></script>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="styling/styles.css"/>
+        <!--Icono de pestaña-->
+        <link rel="shortcut icon" href="favicon.ico" type="image/ico"/>
+    </head>
+    <body>
+        <section id="global">
+            <!--Encabezado-->
+            <header>
+                <img id="logopag" src="styling/logo.png" alt="Logo que no cargó">
+                <h2>TP N°1. Luciano Garcia Montes</h2>
+                <div class="clearfix"></div>
+            </header>
+
+            <!--Página principal-->
+            <section id="contenido">
+                <div id="principal">
+                    <p id="titFrase">Frase aleatoria:</p>
+                    <p id="fraseAleatoria" class=""></p>
+                    <br><br>
+                    <video width="200px" height="400px" poster="https://i.picsum.photos/id/914/200/400.jpg" controls>
+                        <source src="styling/VID_20200601_145409.mp4" type="video/mp4">
+                        Tu navegador no soporta videos.
+                    </video>
+                </div>
+                <div id="lateral">
+                    <aside id="sidebar">
+                        <div id="apis">
+                            <h4><span>Acceso a APIs</span></h4>
+                            <p>
+                                <a href="#" id="botonShibe">Hacé click para una foto aleatoria de un perro!</a><br>
+                                <a href="#" id="dou">API 2</a>
+                            </p>
+                        </div>
+                        <audio controls id="musica">
+                            <source src="styling/musicafondo.mp3" type="audio/mp3">
+                        </audio>
+                        <script>
+                            var audio = document.getElementById("musica");
+                            audio.volume = 0.15;
+                        </script>
+                    </aside>
+                </div>
+                <div id="fotoshibe">
+
+                </div>
+                <div class="clearfix"></div>
+            </section>
+
+        </section>
+
+        <footer>
+            T&G Web - 2020
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,170 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgb(185, 185, 185);
+    font-size: 1.3rem;
+    line-height: 1em;
+}
+.header{
+    background-color: black;
+    overflow: hidden;
+    display: block;
+    flex: initial;
+    
+}
+img{
+    width: 15%;
+}
+.logo{
+    line-height: 30px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 200%;
+    padding: 1em;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 5px rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+header nav {
+    float:right;
+    line-height: 200 px;
+    
+}
+
+
+.container{
+    width: 85%;
+    max-width: 850px;
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding: 2em;
+
+}
+header nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+}
+header nav a:hover{
+    background-color: #c70000;
+    border-radius: 60px;
+    transition: all 1s;
+    color: white;
+    text-decoration: none;
+    }
+  
+
+body>footer{
+    background-color: rgb(39, 39, 39);
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    width: 100%;
+    padding: 1rem 0 ;
+    margin-top: 0;
+    bottom: 0;
+    position: fixed;
+    border: silver solid 2px;
+    
+    
+   
+    
+}
+
+
+.container p{
+    font-size: 2em;
+    padding: 2em;
+    margin: 2em;
+    color: rgb(0, 0, 0);
+    line-height: 2em;
+    font-style: italic;
+    font-family: 'Bangers', cursive;
+}
+video{
+    width: 30%;
+    margin-left: 200px;
+    display: inline-block;
+}
+section{
+    width: 250px;
+    background-color: rgb(29, 29, 29);
+    padding: 1em;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    overflow: hidden;
+    display: block;
+    border: solid 1px black;
+}
+
+article p{
+    font-family: 'Bangers', cursive;
+    line-height: 100px;
+    padding: 1em;
+    margin:  0 auto;
+    color: silver;
+    text-align: center;
+    border: solid 2px silver;
+    font-size: 25px;
+    
+
+}
+article p a {
+    text-decoration: none;
+    padding: 1em;
+    color: white;
+}
+
+
+article p a:hover {
+    background-color: #c70000;
+    border-radius: 60px;
+    transition: all 1s;
+    color: white;
+    text-decoration: none;
+    
+    
+}
+
+article p a:active{
+    text-decoration: none;
+}
+.mostrar{
+    margin-left: 270px ;
+    width: 600px;
+    overflow: auto;
+    height: 400px;
+
+
+}
+.mostrar ul li{
+    line-height: 2em;
+    font-size: 1em;
+    text-align: center;
+}
+input{
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    color: black;
+
+}
+
+#inicio{
+    text-align: center;
+    color: black;
+    font-size: 2em;
+    line-height: 2em;
+    font-family: 'Courier New', Courier, monospace;
+}

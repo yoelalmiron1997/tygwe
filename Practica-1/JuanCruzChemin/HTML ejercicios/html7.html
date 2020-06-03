@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<audio id="player" src="C:\Users\Andrea\Documents\Juan Cruz\Facultad\Tecnologia y Gestion Web\audio.mp3"></audio>
+<div>
+    <button onclick="document.getElementById('player').play()">Play</button>
+    <button onclick="document.getElementById('player').pause()">Pausa</button>
+    <button onclick="document.getElementById('player').load()">Stop</button>
+    <button onclick="document.getElementById('player').volume += .1">Subir volumen</button>
+    <button onclick="document.getElementById('player').volume -= .1">Bajar volumen</button>
+</div> 
+
+
+
+<video width="640" height="480" autoplay muted loop>
+  <source src="C:\Users\Andrea\Documents\Juan Cruz\Facultad\Tecnologia y Gestion Web\video.mp4" type="video/mp4">
+  <source src="C:\Users\Andrea\Documents\Juan Cruz\Facultad\Tecnologia y Gestion Web\video.mp4" type="video/webm">
+  <source src="C:\Users\Andrea\Documents\Juan Cruz\Facultad\Tecnologia y Gestion Web\video.mp4" type="video/ogg">
+  <img src="C:\Users\Andrea\Documents\Juan Cruz\Facultad\Tecnologia y Gestion Web\error.png" alt="Video no soportado">
+  Su navegador no soporta contenido multimedia.
+</video>
+</body>
+</html>
