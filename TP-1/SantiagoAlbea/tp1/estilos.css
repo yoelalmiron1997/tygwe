@@ -1,0 +1,134 @@
+:root{
+	--color-aside:#00A8E8;
+	--color-articles:#2598B9;
+	--color-header:#003459;
+	--color-footer:#00171F;
+	--alto-header:90px;
+	--color-subaside:#fff/*5dfdcb*/;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #fff;
+	font-family:'segoe UI', sans-serif;
+}
+
+header{
+	height: var(--alto-header);
+	background: var(--color-header);
+	margin-bottom: .5%;
+	color: white;
+
+}
+header h2{
+	text-align: center;
+	line-height: var(--alto-header);
+	font-weight: normal;
+}
+.logotipo{
+	float: left;
+	width: var(--alto-header);
+
+}
+.logotipo > img{
+	width: 100%;
+}
+aside{
+	float: left;
+	width: 15%;
+	background: var(--color-aside);	
+	border: 2px solid var(--color-aside);
+}
+aside ul{
+	list-style: none;
+}
+aside ul li{
+	text-align: center;	
+}
+aside ul li a{
+	text-decoration: none;
+	color: #000;
+	display: block;
+	padding: 10px 21px 10px 0px;
+	text-align: center;	
+}
+aside ul li span{
+	color: var(--color-aside);
+	position: relative;
+}
+
+aside ul li a:hover{
+	color: var(--color-aside);
+	background: var(--color-footer);
+	font-weight: bold;
+}
+aside ul li ul{
+	display: none;
+	width: 215px;
+}
+aside ul li:hover > ul{
+	display:block; 
+
+}
+aside ul li ul li {
+	background:var(--color-subaside);
+}
+aside ul li ul li a:hover{
+	color: var(--color-subaside);
+	display:block;
+	
+}
+aside ul li ul li a{
+	padding-left:14px; 
+}
+
+.main .articles{
+	float: left;
+	width: 83.5%;
+	margin-left: .5%; 
+	margin-right: 0px;
+	/*color: #fff;*/
+}
+.main .articles article{
+	margin-bottom: .5%;
+	background: var(--color-articles);
+	padding: .5%;
+	/*-webkit-text-stroke: .4px white;*/
+
+}
+.video {
+	margin-top: .5%
+}
+.video iframe{
+	width: 350px;
+	height: 197px;
+}
+footer{
+	clear: both;
+	background: var(--color-footer);
+	text-align: right;
+	color: #fff;
+
+}
+footer p{
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-right: 10px;
+	font-family: calibri;
+	
+}
+.hide {
+	display: none;
+}
+.frase1{
+	text-shadow:1px 1px .5px #ffffff;
+}
+.frase2{
+	text-shadow:1px 1px .5px #004EFF;
+}
+.frase3{
+	text-shadow:1px 1px 1px #ffffff;
+}
