@@ -27,13 +27,13 @@ $(document).ready(() => {
 function getMovies(nombre, anio, tipo) {
   axios
     .get(
-      "http://www.omdbapi.com/?s=" +
-      nombre +
-      "&y=" +
-      anio +
-      "&type=" +
-      tipo +
-      "&apikey=effcba2"
+      "https://www.omdbapi.com/?s=" +
+        nombre +
+        "&y=" +
+        anio +
+        "&type=" +
+        tipo +
+        "&apikey=effcba2"
     )
     .then((response) => {
       //console.log(response);
@@ -98,6 +98,7 @@ function displayt(id) {
       document.getElementById(k).style.display = "none";
     }
   }
+
   var i;
   j = 0;
   for (i = 0; i < 4; i++) {
@@ -108,6 +109,7 @@ function displayt(id) {
     }
   }
 }
+
 function movieSelected(id) {
   sessionStorage.setItem("movieId", id);
   window.location = "movie.html";
@@ -116,7 +118,7 @@ function movieSelected(id) {
 function getMovie() {
   let movieId = sessionStorage.getItem("movieId");
   axios
-    .get("http://www.omdbapi.com?i=" + movieId + "&apikey=effcba2")
+    .get("https://www.omdbapi.com?i=" + movieId + "&apikey=effcba2")
     .then((response) => {
       //console.log(response);
       let movie = response.data;

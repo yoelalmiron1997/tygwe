@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>TyGWeb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/style.css">  
+</head>
+
+<body>
+  <div  id="app">
+  <nav class="navbar navbar-inverse">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#barra">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="https://www.utn.frlp.edu.ar">
+            <img src="/images/utn-blanco.png" width="25" height="25" alt="UTN">        
+          </a>
+          <a class="navbar-brand" href="#">UTN FRLP TYGW</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="barra" >
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#" @click="getFrase">Home</a></li>
+            <li><a href="#">Acerca de</a></li>
+          </ul>      
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid" id="sidebar">   
+    <div class="row content">
+      <aside class="col-sm-2 sidenav">
+        <p><a href="#">API 1</a></p>
+        <p><a href="#">API 2</a></p>
+      </aside>
+      <div class="col-sm-8 text-left"> 
+        <h1>Frase del Día</h1>
+        <p class="frase">{{frase.texto}}</p>
+        <p class="frase-autor">{{frase.autor}}</p>
+        <hr>      
+      </div>    
+    </div>
+  </div> 
+
+  <footer class="footer navbar-fixed-bottom">
+    <p>Footer Text</p>
+  </footer>
+
+  <!-- jquery 3.5.1 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- boostrap 3.4.1 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- vue developer mode -->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <!-- scripts -->  
+  <script src="js/app.js"></script>
+</div>    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>TP 1 API</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="scripts.js"></script>
+        <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body >
+        <header class="cabecera">
+            <img class="logo" src="./img/logo.jpg" alt="Logotipo de tp1" width="100" height="100">
+            <h1 class="titulo">TP N° "1" - Piccinini Tomas</h1>
+        </header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <aside class="menuLat" id="menuLat">
+            <ul>
+                <li><a href="#" onclick="getInfoVirus()" class="link">Covid-19</a></li>
+                <br>
+                <li><a href="#" onclick="buscarEquipos()" class="link">Equipos NBA</a></li>
+            </ul>
+        </aside>
+        <section class="contenido" id="contenido">
+            <div class="contFrases" >
+                <p class="Frases" id="Frases"><script>mostrarFraseAleatoria()</script></p>
+            </div>
+            <div class="video">			
+            <video id="vid" width="400" height="400" controls="controls" src="./img/VideoPresen.mp4" type="video/mp4"></video>
+            </div>	
+        </section>    
+
+        <footer class="pie">
+            <p class="textito">TyG Web 2020</p>
+        </footer>
+
+
+
+
+
+    </body>
+</html>
