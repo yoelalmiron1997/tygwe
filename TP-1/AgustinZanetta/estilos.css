@@ -46,6 +46,8 @@ header h3 {
 .main {
 	width: 80%;
 	float: left;
+	max-height: 1000px;
+	align-self: stretch;
 }
 
 .main .video {
@@ -142,6 +144,7 @@ footer {
 }
 
 @media screen and (max-width:1050px) {
+
 	.main {
 		text-align: center;
 	}

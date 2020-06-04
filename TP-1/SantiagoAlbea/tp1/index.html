@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trabajo Practico 1</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header>
+	<div class="logotipo">
+		<img alt="Logo" src="logo.jpg">
+	</div>
+	
+		<h2>Trabajo Practico 1 - Santiago Albea</h2>
+		
+</header>
+
+<section class="main">
+
+	<aside>
+		<ul>
+
+			<li><a href="#" onclick="clima()"><span><i class="fas fa-cloud-sun"></i></span> Clima</a>
+			</li>
+
+			<li><a href="#" onclick="covid()"><span><i class="fas fa-virus"></i></span> Estadisticas del Covid en Argentina</a></li>
+
+			<li><a href="#" onclick="getUser()"><span><i class="fab fa-twitter"></i></span> Twitter</a>
+			</li>
+			
+			<li><a href="#"><span><i class="fas fa-futbol"></i></span> Highlights</a>
+				<ul>
+					<li><a href="#" onclick="italia()">Último futbol italiano</a></li>
+					<li><a href="#" onclick="inglaterra()">Último futbol inglés</a></li>
+					<li><a href="#" onclick="espana()">Último futbol español</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</aside>
+
+	<section class="articles">
+
+		<article class="frases">
+		<p id="frase">
+			
+		</p>		
+		</article>
+		<article id="apis" class="hide">
+			<p id="tweet">
+				<input type="text" name="user" placeholder="Ingrese usuario">
+				<input type="submit" onclick="verTweet()">
+			</p>
+			<p id="clima" class="hide">
+				<select id="ciudad" name="ciudad" required="true">
+					<option value selected="selected">-seleccione una ciudad-</option>
+					<option value="468739">Buenos Aires, Argentina</option>
+					<option value="368148">Bogotá, Colombia</option>
+					<option value="455825">Rio de janeiro, Brasil</option>
+					<option value="349859">Santiago, Chile</option>
+					<option value="2459115">Nueva York, USA</option>
+					<option value="44418">Londres, UK</option>
+					<option value="766273">Madrid, España</option>
+					<option value="638242">Berlin, Alemania</option>
+					<option value="2122265">Moscu, Rusia</option>
+					<option value="1105779">Sydney, Australia</option>
+				</select>
+				<input type="submit" onclick="getClima()">
+			</p>
+			<p id="api" style="padding: 5px;">
+			
+			</p>
+			</article>
+		<article class="video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/Km_VZEx9ub4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		</article>
+
+	</section>
+
+</section>
+
+<footer>
+	<p>TyGWeb<br>03/06/2020</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script type="text/javascript" src="funciones.js"></script>
+
+</body>
+</html>

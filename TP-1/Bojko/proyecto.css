@@ -1,0 +1,113 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+    margin: 0;
+    font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	list-style:none
+}
+#videos{
+	margin-left: 4px;
+	order: 2px solid black;
+}
+#Frase{
+	margin-top: 4px;
+	margin-left: 4px;
+}
+#link{
+	color: rgba(255, 0, 0, 0.678);
+	text-shadow: 2px 1px 0 rgb(39, 17, 17)
+}
+#Trends
+{
+	margin-left: 4px;
+}
+#covid19{
+	margin-left: 4px;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+header {
+	flex: 0 0 auto;
+	display: flex;
+	height: 4rem;
+	border: 2px solid black;
+	background-image: url(./prism.png);
+	color: rgba(221, 19, 19, 0.938);
+	text-shadow: 2px 1px 0 rgb(59, 22, 22);
+
+	padding: 0.5rem 1rem;
+}
+
+.division {
+	flex: 1 1 33%;
+	
+}
+
+.division:first-child {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.division:nth-child( 2 ) {
+	flex: 0 1 33%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img {
+	height: 100%;
+	width: auto;
+}
+
+.container {
+	flex: 1 1 auto;
+	display: flex;
+}
+
+nav {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+	flex-direction: column;
+	width: 10rem;
+	border: solid black;
+	border-width: 1.5px 2px 1.5px;
+	background-image: url(./low_contrast_linen.png);
+	
+	
+	
+    
+    
+    
+}
+
+a {
+    margin-top: 3rem;
+}
+
+main {
+	border: 2px solid black;
+	flex: 1 1 auto;
+	background-image: url(./topography.png);
+	
+}
+
+footer {
+	flex: 0 0 auto;
+	height: 3rem;
+	
+	background-image: url(./prism.png);
+	color: #FF0000;
+	text-shadow: 2px 1px 0 rgb(39, 17, 17);
+	border: 2px solid black;
+    padding: 1rem;
+    text-align: end;
+}
+
