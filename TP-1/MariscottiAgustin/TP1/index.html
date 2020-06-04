@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TyGWeb-TP1</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <script>
+            var frases = ["\"Todo el mundo debería aprender a programar, porque te enseña a pensar.\"",
+            "\"Cuando innovas, te equivocas. Lo que marca la diferencia es darse cuenta, rectificar y seguir innovando.\"",
+            "\"Está bien celebrar el éxito, pero es más importante prestar atención a las lecciones del fracaso.\""]
+            window.onload=function(){
+                var rd = Math.floor(Math.random()*3)
+                console.log(frases[rd]);
+                var f = document.createElement("p")
+                f.innerHTML=frases[rd]
+                f.id="f"+rd
+                document.getElementsByClassName("frase")[0].appendChild(f)
+            }
+        </script>
+        <link rel="icon" type="image/png" href="img/logo.png">
+    </head>
+    <body>
+        <header>
+            <img src="img/logo.png" class="logo">
+            <h1>TP Nro 1 - Mariscotti, Agustín</h1>
+        </header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="https://twitter.com/AgusMariss">Mi Twitter</a>
+            <a href="https://github.com/AgusMaris">Mi Git</a>
+        </nav>
+        <aside>
+            <a href="API1.html">Link Api1 (AniList API)</a>
+            <hr>
+            <a href="API2.html">Link Api2 (Twitter API)</a>
+        </aside>
+        <div class="video">
+            <video src="src/Video.mp4" width="480" height="360" controls poster="asdads"></video>
+        </div>
+        <div class="frase"></div>
+        <footer>TyGWeb 2020</footer>
+    </body>
+</html>
