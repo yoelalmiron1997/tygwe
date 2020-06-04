@@ -1,0 +1,61 @@
+<html>
+
+<header>
+	<img src="./jc.jpg" title="Logo" align="left">
+	<h1> Juan Cruz Chemin Viera </h1>
+	<h2> Trabajo Practico N1 </h2>
+	<link rel="stylesheet" type="text/css" href="./estilos.css">
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script> 
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="scriptprueba.js"></script>
+			
+</header>
+
+
+<body background="./fondo.jpg">
+
+
+<script language="JavaScript">
+var Frase=new Array() 
+Frase[0] = "Las guerras seguirán mientras el color de la piel siga siendo más importante que el de los ojos (Bob Marley)";
+Frase[1] = "Si das pescado a un hombre hambriento lo nutres durante una jornada. Si le enseñas a pescar, le nutrirás toda su vida (Lao Tsé)";
+Frase[2] = "No puedes pretender ser un ángel si te rodean los demonios (2Pac)";
+var F = Frase.length;
+var aleatorio=Math.round(Math.random()*(F-1));
+function fraseAleatoria(){
+        document.write(Frase[aleatorio]);
+}
+</script>
+
+<section class="contenido" id="contenido">
+<div>
+<p><article><script language="JavaScript">
+fraseAleatoria();
+</script></article></p>
+</div>
+
+<div> 
+<video src="./videop.mov" width="500" height="400" controls="botones" id="Inicio"></video>
+</div>
+</section>
+
+<aside align="left">
+	<ul>
+		<li class="actual"><a href="Entrega1.html">Inicio</a></li>
+		<p></p>
+		<li><a href="#" onclick="hola()" class="link">Twitter</a></li>
+		<p></p>
+		<li><a href="#" onclick="getInfo()" class="link">Salud</a></li>
+		
+	</ul>
+</aside>
+
+
+</body>
+
+<footer>
+<t>
+TyG Web 2020
+</t>
+</footer>
+</html>
