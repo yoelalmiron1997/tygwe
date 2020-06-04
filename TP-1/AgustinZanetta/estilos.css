@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	font-size: 16px;
+	border: 1px solid black;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6db3f2+0,54a3ee+29,3690f0+45,1e69de+100 */
+	background: rgb(109,179,242); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(109,179,242,1) 0%, rgba(84,163,238,1) 29%, rgba(54,144,240,1) 45%, rgba(30,105,222,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 29%,rgba(54,144,240,1) 45%,rgba(30,105,222,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(109,179,242,1) 0%,rgba(84,163,238,1) 29%,rgba(54,144,240,1) 45%,rgba(30,105,222,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6db3f2', endColorstr='#1e69de',GradientType=0 ); /* IE6-9 */
+}
+
+ .contendedor {
+	width: 90%; 
+	max-width: 1000px;
+	margin: 20px auto;
+	overflow: hidden;
+}
+
+header {
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	color: black;
+	align-items: center;
+	overflow: hidden;
+	border-bottom: 1px solid black;
+}
+
+header img {
+	float: left;
+}
+
+header h3 {
+	font-family: Arial Black;
+	text-align: center;
+	padding: 40px;
+}
+
+.main {
+	width: 80%;
+	float: left;
+	max-height: 1000px;
+	align-self: stretch;
+}
+
+.main .video {
+	text-align: center;
+	padding: 20px;
+}
+
+
+aside {
+	width: 20%;
+	color: #fff;
+	float: left;
+}
+
+.widget {
+	width: 100%;
+	height: 509px;
+	background: blue;
+	float: left;
+	border-right: 1px solid black;
+	text-align: center;
+}
+
+.widget li {
+	margin-top: 20px;
+}
+
+#conversion {
+	display: none;
+	background: #DBEFFA; 
+	color: #000;
+	width: 30%;
+	height: 150px;
+	float: left;
+	padding: 10px;
+	margin: 30px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+#clima {
+	display: none;
+	background: #A9E8FF;
+	color: #000;
+	width: 30%;
+	height: 250px;
+	padding: 10px;
+	float: right;
+	margin: 30px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.enlace {
+	font-size: 20px;
+	color: white;
+}
+
+.enlace:hover {
+	background: #ef8354;
+}
+
+footer {
+	width: 100%;
+	clear: both;
+	background: #000;
+	color: #fff;
+	padding: 15px 10px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+
+#jstext0{
+	padding: 10px;
+	display: none;
+	color: #fff;
+	text-shadow: 2px 0px 10px blue;
+	text-align: center;
+}
+
+#jstext1{
+	padding: 10px;
+	display: none;
+	text-shadow: 2px 3px 5px red;
+	text-align: center;
+}
+
+#jstext2{
+	padding: 10px;
+	display: none;
+	text-shadow: 2px -3px 10px green;
+	text-align: center;
+}
+
+@media screen and (max-width:1050px) {
+
+	.main {
+		text-align: center;
+	}
+
+	#clima {
+		width: 80%;
+		float: left;
+	}
+
+	#conversion {
+		width: 80%;
+		float: left;
+	}
+}
