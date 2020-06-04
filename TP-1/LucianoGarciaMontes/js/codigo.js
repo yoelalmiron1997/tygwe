@@ -13,28 +13,12 @@ function frase(){
     $("#fraseAleatoria").css("visibility","visible");
 };
 
-function nuevaFrase(){
-    var numFrase = Math.floor(Math.random()*(quotes.length));
-    $("#fraseAleatoria").text(quotes[numFrase]);
-    $("#fraseAleatoria").attr("class", "frase"+numFrase);
-    $("#fraseAleatoria").css("visibility","visible");
-};
-
 $(document).ready(function(){
 
     $(".coronavirus").hide();
     frase();
 
-    $("#botonperro").on("click",function(){
-        $(".coronavirus").hide();
-        $(".fotoperro").show();
-    });
-
-    $("#botoncorona").on("click",function(){
-        $(".fotoperro").hide();
-        $(".fotoperro").empty();
-        $(".coronavirus").show();
-    });
+    $("#botoncorona").on("click",datosCorona);
 
     const link = "https://cors-anywhere.herokuapp.com/http://shibe.online/api/shibes?count=1&urls=true&httpsUrls=true"
     $("#botonperro").click(function(){
@@ -42,8 +26,7 @@ $(document).ready(function(){
             url: link,
             type: "GET",
             success: function(imagen){
-                console.log(imagen);
-                $(".fotoperro").html('<img src="' + imagen + '" />');
+                window.open(imagen,"","width=300,height=400");
             },
             error: function(error){
                 console.log(error)
@@ -51,23 +34,26 @@ $(document).ready(function(){
         });
     });
 
-    const link2 = "https://api.covid19api.com/summary"
-    $("#botoncorona").click(function(){
-        $.ajax({
-            url: link2,
-            type: "GET",
-            success: function(resultados){
-                console.log(resultados);
-                $("#confMundo").html(resultados.Global.TotalConfirmed);
-                $("#muerMundo").html(resultados.Global.TotalDeaths);
-                $("#recMundo").html(resultados.Global.TotalRecovered);
-                $("#confArg").html(resultados.Countries[6].TotalConfirmed);
-                $("#muerArg").html(resultados.Countries[6].TotalDeaths);
-                $("#recArg").html(resultados.Countries[6].TotalRecovered);
-            },
-            error: function(error){
-                console.log(error)
-            }
+    function datosCorona(){
+        const link2 = "https://api.covid19api.com/summary"
+        $("#botoncorona").click(function(){
+            $.ajax({
+                url: link2,
+                type: "GET",
+                success: function(resultados){
+                    $('.principal').empty()
+                    .append("<br><br><br><br><br>")
+                    .append("Contagiados a nivel mundial: " + resultados.Global.TotalConfirmed + "<br>")
+                    .append("Muertos a nivel mundial: " + resultados.Global.TotalDeaths + "<br>")
+                    .append("Recuperados a nivel mundial: " + resultados.Global.TotalRecovered + "<br>")
+                    .append("Contagiados en Argentina: " + resultados.Countries[6].TotalConfirmed + "<br>")
+                    .append("Muertos en Argentina: " + resultados.Countries[6].TotalDeaths + "<br>")
+                    .append("Recuperados en Argentina: " + resultados.Countries[6].TotalRecovered + "<br>")
+                },
+                error: function(error){
+                    console.log(error)
+                }
+            });
         });
-    });
+    };
 });
