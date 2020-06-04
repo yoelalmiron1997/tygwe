@@ -1,8 +1,11 @@
-function getdata() {
-  let countryselected = $("#idpais").val();
+function getdata(string) {
+  console.log(string);
+  let countryselected = string; //$("#idpais").val();
   axios
     .get(
-      "https://api.covid19api.com/total/country/" + countryselected + ""
+      "https://cors-anywhere.herokuapp.com/https://api.covid19api.com/total/country/" +
+      countryselected +
+      ""
       //"https://api.covid19api.com/countries"
       //"https://api.covid19api.com/all"
       // "https://api.covid19api.com/dayone/country/" +
@@ -12,7 +15,7 @@ function getdata() {
     .then((response) => {
       document.getElementById("respuesta").style.display = "block";
       // let cases = response.data[0].Cases;
-      console.log(response);
+      //console.log(response);
       let countries = response.data;
       let output = "";
       $.each(countries, (index, country) => {
