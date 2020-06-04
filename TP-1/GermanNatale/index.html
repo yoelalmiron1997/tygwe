@@ -26,7 +26,8 @@
         </div>
         <div class="collapse navbar-collapse navbar-right" id="barra" >
           <ul class="nav navbar-nav">            
-            <li class="active"><a href="#" @click="modulo = 'home'">Home</a></li>
+            <li class="active"><a href="#" @click="modulo = 'home'">Home</a></li>           
+            <li><a href="#" @click="modulo = 'tecno'">Tecnologias</a></li>
             <li><a href="#" @click="modulo = 'acerca'">Acerca de</a></li>
           </ul>      
         </div>
@@ -37,16 +38,20 @@
   <div class="container-fluid" id="sidebar">   
     <div class="row content">
       <aside class="col-sm-2 sidenav">
-        <p><a href="#">API 1</a></p>
-        <p><a href="#">API 2</a></p>
+        <p><a href="#" @click="modulo = 'api1'">API 1</a></p>
+        <p><a href="#" @click="modulo = 'api2'">API 2</a></p>
       </aside>
       <div class="col-sm-8 text-left">
         <home v-if="modulo == 'home'"></home>
-        <acerca v-if="modulo == 'acerca'"></acerca>             
+        <acerca v-if="modulo == 'acerca'"></acerca>  
+        <tecno v-if="modulo == 'tecno'"></tecno> 
+        <api1 v-if="modulo == 'api1'"></api1>
+        <api2 v-if="modulo == 'api2'"></api2>
+
       </div>    
     </div>
   </div> 
-
+  
   <footer class="footer navbar-fixed-bottom">
     <p>Footer Text</p>
   </footer>
@@ -59,7 +64,10 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>  
   <!-- scripts -->
   <script src="components/home.js"></script>
+  <script src="components/tecno.js"></script>
   <script src="components/acerca.js"></script>
+  <script src="components/api1.js"></script>
+  <script src="components/api2.js"></script>
   <script src="js/app.js"></script>  
 </div>    
 </body>

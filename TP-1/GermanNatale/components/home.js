@@ -1,3 +1,4 @@
+//entiendo que esta mal la funcion sin ser parte del Vue.component pero no entendi como incorporarla
 function getFrase(){                      
     var frases = '{ "frases" : [' +
     '{ "autor":"John Lenon" , "texto":"La vida es aquello que va pasando mientras hacemos planes para el futuro." },' +
