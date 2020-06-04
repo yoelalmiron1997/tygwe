@@ -1,0 +1,134 @@
+body{
+    background: url("../fondo.jpg");
+    background-attachment: fixed;
+}
+
+header{
+    text-align: center;
+    font-family: 'Segoe UI', Arial;
+    font-size: 20px;
+    letter-spacing: 1px;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0px 0px 2px gray;
+}
+
+header img{
+    height: 70px;
+    width: 70px;
+    float: left;
+    padding-top: 10px;
+}
+
+aside{
+    font-family: Helvetica, Arial;
+    float: left;
+    height: calc(100vh - 110px);
+    width: 20%;
+    background: lightgray;
+    /*clear: both;*/
+    vertical-align: middle;
+    text-align: center;
+    list-style: none;
+    padding-top: 10px;
+}
+
+aside h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 15px;
+
+}
+
+aside p{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+aside audio{
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.principal{
+    background: white;
+    height: calc(100vh - 110px);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+
+#barra{
+    margin-top: 30px;
+    border-bottom: 2px solid grey;
+    margin-bottom: 30px;
+}
+
+.principal #titFrase{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#fraseAleatoria{
+    font-family: Arial, Helvetica, sans-serif;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.frase0{
+    text-shadow: 5px 5px 10px blue;
+}
+.frase1{
+    text-shadow: 5px 5px 10px green;
+}
+.frase2{
+    text-shadow: 5px 5px 10px red;
+}
+
+.frase3{
+    text-shadow: 5px 5px 10px orange;
+}
+
+.frase4{
+    text-shadow: 5px 5px 10px purple;
+}
+
+.principal video{
+    margin: auto;
+    width: 300px;
+    border-radius: 5px;
+    border: 2px solid gray;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 25px;
+    background: black;
+    display: flex;
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    line-height: 40px;
+    background-color: white;
+    position: fixed;
+    width:99.15%;
+    height:40px;
+    bottom: 0px;
+    border-top: 2px solid black;
+}
