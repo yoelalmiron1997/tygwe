@@ -105,12 +105,14 @@ aside ul li ul li a{
 .video iframe{
 	width: 350px;
 	height: 197px;
+	padding-left: 400px;
 }
 footer{
 	clear: both;
 	background: var(--color-footer);
 	text-align: right;
 	color: #fff;
+	display: block;
 
 }
 footer p{
@@ -118,8 +120,8 @@ footer p{
 	font-size: 1.2em;
 	padding-right: 10px;
 	font-family: calibri;
-	
 }
+	
 .hide {
 	display: none;
 }
