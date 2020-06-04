@@ -43,7 +43,9 @@
     .sidenav {
       padding-top: 20px;
       background-color: #f1f1f1;
-      height: 100%;
+      height: calc(100vh - 105px);  
+      border-right: 1px solid black;   
+      text-align: center;    
     }
     
     footer {
