@@ -8,8 +8,10 @@
 </head>
 <body>
     <header>
+        <a href="index.html">
         <img  id="logoheader" src="https://www.theclinic.cl/wp-content/uploads/2020/04/gif-funeral.gif" alt="">
-        <h2><strong><b>TP1-Martin Lunasco</b></strong></h2>
+        </a>
+        <h2 style="text-align: left;"><strong>TP1-Martin Lunasco</strong></h2>
     </header>
     <section>
     <nav>
@@ -17,12 +19,14 @@
             <li>
                 <a href="">API1</a>
             </li>
-            <a href="">API2</a>
+            <li>
+                <a href="">API2</a>
+            </li>
         </ul>
     </nav>
     <article>
         <div>
-            <span id="frasespan">-</span>
+            <span id="frasespan" onclick="cambiarMensaje();">aca va la frase</span><br>
             <video src="MartinLunasco.mp4" controls width="300" height="300"></video>
         </div>
     </article>
@@ -31,6 +35,9 @@
         <span id="footerspan">Tecnologia y gestion web-2020</span>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="scriptjs.js"></script>
+    <script src="scriptjs.js"> </script>
+    <script>
+        cambiarMensaje();
+    </script>
 </body>
 </html>
