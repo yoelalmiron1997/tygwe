@@ -1,0 +1,67 @@
+.header {
+  padding: 0.5px;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  font-style:fantasy;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+.header img {
+  float: left;
+  padding: 6;
+  width: 70px;
+  height: 70px;
+}
+
+.footer{
+  background-color: #1abc9c;
+  bottom: 0; 
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  text-align: right;
+  font-style:fantasy;
+  color: #fff;
+}
+.style1{
+    background-color:red;
+    color:white;
+    font-size:44px;
+}
+/*
+#frase{
+  position:relative;
+    float:left;
+    width:40%;
+    padding:1em;
+    margin:2em 10px 4em;
+    background:#fff;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3),0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+#frase:hover{
+    box-shadow: 1px 1px 10px  rgba(230, 230, 230, 0.3);
+    opacity: 1;
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+.frase0{
+    text-shadow: 1px 1px 20px rgba(212, 245, 65, 0.9);
+}
+.frase1{
+    text-shadow: 1px 1px 20px rgba(197, 46, 46, 0.9);
+}
+.frase2{
+    text-shadow: 1px 1px 20px rgba(159, 174, 255, 0.9);
+}
+.frase3{
+    text-shadow: 1px 1px 20px rgba(159, 174, 255, 0.9);
+}
+.frase4{
+    text-shadow: 1px 1px 20px rgba(159, 174, 255, 0.9);
+}*/
