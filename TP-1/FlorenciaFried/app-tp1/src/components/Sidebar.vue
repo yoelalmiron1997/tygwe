@@ -7,53 +7,30 @@
         </button>
       </div>
 
-      <form class="form" v-on:submit.prevent="checkForm()">
-        <label class="label" for="btc">Elija la moneda</label>
+      <form-cripto @criptoCompleted="setValuesCripto"> </form-cripto>
 
-        <select class="select" id="btc" v-model="coin" name="btc">
-          <option>ARS</option>
-          <option>EUR</option>
-          <option>USD</option>
-        </select>
-
-        <input class="input" type="submit" value="Buscar precio del Bitcoin" />
-
-        <p class="error" v-if="error">Debe elegir una moneda</p>
-      </form>
+      <form-image @imagesCompleted="setValuesImages"></form-image>
     </aside>
 
     <section class="data-container">
-      {{ phraseRandom() }}
-      <p class="phrase">Frase: "{{ phrases[number] }}"</p>
+      <Presentation v-if="type === 'video'"></Presentation>
 
-      <video
-        autoplay
-        controls
-        class="video"
-        v-if="type === 'video'"
-        src="../assets/video.mp4"
-      ></video>
+      <p v-if="errorCoin" class="error">
+        Ha acurrido un error, no se puede mostrar el precio.
+      </p>
 
-      <div class="cripto" v-if="type === 'cripto'">
-        <img class="image" src="../assets/cripto.jpg" />
+      <div v-if="type === 'cripto' && errorCoin === false">
+        {{ changeValueErrorImages() }}
+        <Cripto :coin="coin" :info="info"></Cripto>
+      </div>
 
-        <div v-if="coin === 'ARS'">
-          <p>El precio actual es: {{ info.ARS.PRICE }}</p>
-          <p>Fuente: {{ info.ARS.LASTMARKET }}</p>
-          <p>Ultima actualizacion: {{ info.ARS.LASTUPDATE }}</p>
-        </div>
+      <p v-if="errorImages" class="error">
+        Ha acurrido un error, no se pueden mostrar las imagenes.
+      </p>
 
-        <div v-if="coin === 'EUR'">
-          <p>El precio actual es: {{ info.EUR.PRICE }}</p>
-          <p>Fuente: {{ info.EUR.LASTMARKET }}</p>
-          <p>Ultima actualizacion: {{ info.EUR.LASTUPDATE }}</p>
-        </div>
-
-        <div v-if="coin === 'USD'">
-          <p>El precio actual es: {{ info.USD.PRICE }}</p>
-          <p>Fuente: {{ info.USD.LASTMARKET }}</p>
-          <p>Ultima actualizacion: {{ info.USD.LASTUPDATE }}</p>
-        </div>
+      <div v-if="type === 'images' && errorImages === false">
+        {{ changeValueErrorCoin() }}
+        <Images :info="info"></Images>
       </div>
     </section>
   </div>
@@ -61,42 +38,55 @@
 
 <script>
 
-import axios from 'axios';
+import Presentation from './Presentation';
+import Cripto from './Cripto';
+import Images from './Images';
+import FormCripto from './FormCripto';
+import FormImage from './FormImage';
 
 export default {
   name: 'Sidebar',
+
+  components: {
+    Presentation,
+    Cripto,
+    Images,
+    FormCripto,
+    FormImage,
+  },
 
   data: function () {
     return {
       type: 'video',
       coin: '',
-      error: false,
       info: null,
       number: 0,
-      phrases: ['Son nuestras elecciones las que muestran lo que somos, mucho más que nuestras habilidades.',
-        'Nuestras vidas no sólo se miden en años, se miden en las vidas de aquellos que impactamos.',
-        'Una mente necesita de los libros igual que una espada de una piedra de amoldar, para conservar el filo.'],
+      search: '',
+      errorCoin: false,
+      errorImages: false,
     }
   },
 
   methods: {
-    checkForm: function () {
-      if (!this.coin) {
-        this.error = true;
-      } else {
-        this.error = false,
-          axios
-            .get("https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=" + this.coin)
-            .then((response) => {
-              this.info = response.data.DISPLAY.BTC;
-            }),
-          this.type = 'cripto';
-      }
+    setValuesCripto: function (type, coin, info, error) {
+      this.type = type;
+      this.coin = coin;
+      this.info = info;
+      this.errorCoin = error;
     },
 
-    phraseRandom: function () {
-      console.log(this.number);
-      this.number = Math.floor(Math.random() * (3));
+    setValuesImages: function (info, type, error) {
+      this.type = type;
+      this.info = info;
+      this.errorImages = error;
+    },
+
+    changeValueErrorCoin: function () {
+      this.errorCoin = false;
+    },
+
+    changeValueErrorImages: function () {
+      this.errorImages = false;
     }
   }
 }
@@ -133,57 +123,15 @@ export default {
   cursor: pointer;
 }
 
-.form {
-  margin-top: 30px;
-  margin-left: 10px;
-}
-
-.label {
-  margin: 10px;
-  color: rgb(87, 99, 207);
-}
-
-.select {
-  display: block;
-  margin: 10px;
-  width: 40%;
-}
-
-.input {
-  margin: 10px;
-  width: 90%;
-}
-
-.error {
-  color: red;
-  margin-left: 15px;
-}
-
 .data-container {
   width: 80%;
   height: 70vh;
   float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.video {
-  max-width: 100%;
-  max-height: 80%;
-  border: 3px solid black;
-  border-radius: 5px;
-}
-
-.cripto {
-  max-width: 100%;
-  max-height: 80%;
+.error {
+  text-align: center;
   font-size: large;
-  color: green;
-}
-
-.image {
-  width: 400px;
-  height: 200px;
+  color: red;
 }
 </style>

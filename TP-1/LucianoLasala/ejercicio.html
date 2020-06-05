@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercio TyGWeb</title>
+	<link rel="stylesheet" type="text/css" href="ejercicio.css">
+</head>
+<body>
+	<div id="app">
+	<div class="wrapper">
+		<header>
+			<img id="logo" src="https://previews.123rf.com/images/jemastock/jemastock1704/jemastock170411488/76739365-destornillador-y-llave-de-reparaci%C3%B3n-herramienta-icono-imagen-vector-ilustraci%C3%B3n-dise%C3%B1o.jpg">
+			<h1>TP Nro 1-Lasala, Luciano
+			</h1>
+		</header>
+		<div class="conteiner">
+		<aside>
+			<nav>
+				<div>
+					<a @click="api1()" :style="showElements ? 'color:blue' : 'color:black'">Discord</a>
+				</div>
+				<div>
+					<a @click="api2()" :style="showElementsTwo ? 'color:blue' : 'color:black'">Unsplash</a>
+				</div>
+			</nav>
+		</aside>
+		<section>
+				<br>
+				<article v-if="!showElements && !showElementsTwo">
+					<p :class="{'shadowOne' : showPhrase.style === 1, 'shadowTwo' : showPhrase.style === 2, 
+					'shadowThree' : showPhrase.style === 3 }">{{ showPhrase.phrase }}</p>
+					<br>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/2ux6PDWlI6E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</article>
+				<article v-if="showElements">
+					<h2>My discord server information</h2>
+					<br>
+					<table border="1">
+						<tr>
+							<th>Id</th>
+							<th>Name</th>
+							<th>Invitation</th>
+							<th>Presence Count</th>
+							<th>Channel</th>
+						</tr>
+						<tr>
+							<td>{{ elementsThree.id}}</td>
+							<td>{{ elementsThree.name}}</td>
+							<td>{{ elementsThree.instant_invite}}</td>
+							<td>{{ elementsThree.presence_count}}</td>
+							<td>{{ elementsThree.channels[0].name }}</td>
+						</tr>
+					</table>
+					<br>
+					<h3>Members Online</h3>
+					<table v-if="elementsThree.members.length > 0" border="1">
+						<tr>
+							<th>Id</th>
+							<th>Username</th>
+							<th>Avatar</th>
+							<th>Status</th>
+						</tr>
+						<tr v-for= "element in elementsThree.members">
+							<td>{{ element.id }}</td>
+							<td>{{ element.username }}</td>
+							<td><img :src="element.avatar_url"></td>
+							<td>{{ element.status }}</td>
+						</tr>
+					</table>
+					<p v-if="elementsThree.members.length == 0">There are no members online at this moment...</p>
+				</article>
+				<article v-if="showElementsTwo">
+					<h2>Photos of the user: "{{userName}}"</h2>
+					<br>
+				<table border="1">
+					<tr>
+						<th>
+							Photo
+						</th>
+						<th>
+							Description
+						</th>
+					</tr>
+					<tr v-for = "(element,index) in elementsTwo">
+						<td>
+							<img id="unimg" :src="elementsTwoUrls[index]">
+						</td>
+						<td>
+							{{ element }}
+						</td>
+					</tr>
+				</table>
+				</article>
+		</section>
+		</div>
+		<footer>
+			TyGWeb Año: 2020
+		</footer>
+		</div>
+	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+	<script type="text/javascript" src="ejercicio.js"></script>
+</body>
+</html>
