@@ -1,0 +1,61 @@
+.frase-0 {
+  text-shadow: 1px 1px 2px pink;
+}
+.frase-1 {
+  text-shadow: #fc0 1px 0 10px;
+}
+.frase-2 {
+  text-shadow: 1px 1px 2px red, 0 0 1em blue, 0 0 0.2em blue;
+}
+.titulo {
+  margin-bottom: 20px;
+}
+.escondido {
+  display: none;
+}
+.video {
+  height: 350px;
+}
+.api-breakingbad,
+.api-criptomonedas,
+.inicial {
+  overflow: auto;
+}
+.video,
+.api-breakingbad img {
+  float: left;
+  padding-right: 5px;
+  margin-right: 20px;
+}
+.api-breakingbad p span {
+  text-decoration: underline;
+}
+.api-criptomonedas p span {
+  font-weight: bold;
+}
+.api-criptomonedas img {
+  float: left;
+  margin: 20px;
+}
+.api-criptomonedas article {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
+}
+.api-criptomonedas article:last-child {
+  border-bottom: none;
+}
+.api-clima #error-ciudad-no-encontrada {
+  margin-top: 20px;
+}
+#pronostico .card-body {
+  padding-bottom: 0;
+}
+#pronostico .card-body p:last-child {
+  margin-bottom: 0;
+}
+#pronostico .col-md-8 img {
+  width: 30px;
+  position: relative;
+  bottom: 7px;
+}

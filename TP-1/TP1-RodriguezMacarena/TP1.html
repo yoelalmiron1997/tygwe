@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+    	<meta charset="utf-8" />
+      <link href="css/tp1estilos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css" />
+      <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://apis.google.com/js/api.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script> 
+      <script src="js/apiYoutube.js"></script>
+      <script src="js/scriptFrases.js"></script>
+      <script src="js/visibilidad.js"></script>
+      <script src="js/clima.js"></script>
+      <link rel="shortcut icon" type="image" href="multimedia/favicon-96x96.png">
+    	<title>TP1-Rodriguez</title>
+    </head>
+
+    <body class="fondo">
+
+      <header> 
+        <figure >
+          <img class="logo" src="multimedia/logo.png">
+        </figure>
+        <h1 >TP Nº1 - Rodriguez, Macarena</h1> 
+      </header>
+
+      <asside class="social-bar" id="sideNav" >
+        <a href="#frase"  class="icon icon-home inf " title="Inicio"></a>
+        <br>
+        <a href="#presentacion"  class="icon icon-film inf col-sm-4 col-xs well" title="Presentacion" ></a>
+        <br>
+        <a  href="#clima"  class="icon icon-onedrive inf col-sm-4 col-xs well" title="Clima" ></a>
+        <br>
+        <a href="#youtube"   class="icon icon-youtube inf col-sm-4 col-xs well" title="Youtube" ></a>
+      </asside>
+      
+
+      <section  id="frase">
+             <script type="text/javascript" class="frase">escribir();</script>
+      </section>
+
+      <section  class="col-xs-12 well oculto" id="presentacion">
+        <div class="app-wrap">
+        <h2>Video de presentación</h2>
+        <br>
+        <video controls="controls" >
+          <source src="multimedia/video.mp4" type="video/mp4">
+        </video>
+        </div>
+      </section>
+      
+      <section class="col-xs-12 well oculto" id="clima">
+        <div class="app-wrap">
+          <h3>Consultar clima</h3>
+          <br>
+          <input type="text" autocomplete="off" class="search-box"  placeholder="Buscar por ciudad..." />
+            <main>
+              <img src=""  id="icon" class="icono">
+              <div class="location">
+                <div class="city">Berazategui, AR</div>
+                <div class="date">Viernes 5 Junio 2020</div>
+              </div>
+              <div class="current">
+                <div class="temp">15<span>°c</span></div>
+                <div class="weather">Soleado</div>
+                <div class="hi-low">13°c / 16°c</div>
+                <div class="humidity">Humedad: 50<span>%</span></div>
+              </div>
+            </main>
+        </div>
+      </section>
+       
+       
+      <section class="col-xs-12 well oculto" id="youtube">
+        <div class="app-wrap">
+          <form id="search-term">
+            <h3 class="icon2 icon-youtube2"></h3> 
+            <input type="text" placeholder="Buscar" id="query" autocomplete="off">
+            <button type="submit" class="icon2 icon-search"></button>
+          </form>
+          <div id="videoListContainer"></div>
+        </div>
+      </section>
+
+    	<footer>
+        <p1>UTN - FRLP - Tecnología y Gestión web - 2020 </p1>
+      </footer>
+
+    </body>
+</html>

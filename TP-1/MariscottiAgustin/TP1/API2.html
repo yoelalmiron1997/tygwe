@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TyGWeb-TP1</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/stylesAPI2.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="src/API2.js"></script>
+        <link rel="icon" type="image/png" href="img/logo.png">
+    </head>
+    <body>
+        <header>
+            <img src="img/logo.png" class="logo">
+            <h1>TP Nro 1 - Mariscotti, Agustín</h1>
+        </header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="https://twitter.com/AgusMariss">Mi Twitter</a>
+            <a href="https://github.com/AgusMaris">Mi Git</a>
+            <div class="search">
+                <img src="img/Search.svg" class="bSvg" onclick="buscarTweets()">
+            </div>
+            <input type="text" class="iSearch" id="iSearch" placeholder="Buscar tweets..." onkeydown="checkEnter()">
+        </nav>
+        <div id="results"></div>
+        <footer>TyGWeb 2020</footer>
+    </body>
+</html>

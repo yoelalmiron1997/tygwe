@@ -45,7 +45,11 @@
           <h6 style="text-align: center;">NAV</h6>
           <ul>
             <li class="radius"  ><button class="radius" onclick="parafrasear()">Resetar Frase</button></li>
+            <li class="radius"  ><button class="radius" id="video">Resetear Video</button></li>
             <li class="radius"  ><button class="radius" onclick="tyc()">@ESPN-Timeline</button></li>
+            <li class="radius"  ><button class="radius" id="facebook">MattGameplay-FanPage</button></li>
+            <li class="radius"  ><button class="radius" id="coronavirus">Coronavirus - ARG</button></li>
+            
           </ul>
         </nav>
       </aside>
@@ -56,11 +60,28 @@
           <h6>Article#1</h6>
           <p class="frase"></p>
         </article>
+
         <article class="Phrase article radius">
           <h6>Article#2</h6>
-          <p class="social">
-            
-          </p>
+          <!-- plugin de timeline twitter-->
+          <div class="social" style="display: none;">
+            <a class="twitter-timeline" data-width="800" data-height="600" data-theme="light" href="https://twitter.com/SC_ESPN?ref_src=twsrc%5Etfw">Tweets by SC_ESPN</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+
+          <!--video-->
+          <video  controls width="300px" id="video2" class="radius">
+            <source src="presentacion-webm.webm" type="video/webm">
+            <p>Tu navegador no soporta web</p>
+          </video>
+
+          <!--covid 19-->
+          <div id="covid">
+
+          </div>
+
+          <!-- div plugin de facebook-->  
+          <div class="fb-page" data-href="https://web.facebook.com/MattGameplays/" data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="display:none;" id="face"><blockquote cite="https://web.facebook.com/MattGameplays/" class="fb-xfbml-parse-ignore"><a href="https://web.facebook.com/MattGameplays/">MattGameplay</a></blockquote></div>
+        
         </article>
         
       </section>
@@ -80,10 +101,10 @@
   </div>
 
 
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v7.0"></script>
 
-
-
-
+  <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
   <script src="js/vendor/modernizr-3.8.0.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>

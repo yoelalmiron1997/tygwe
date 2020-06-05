@@ -1,0 +1,64 @@
+nav a{
+    width: 20%;
+}
+
+li p.name{
+    font-size: 1.75vw;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    animation: fadein 1s;
+}
+
+#cover{
+    transition: 0.5s;
+    margin-top: 2vh;
+}
+
+#cover:hover{
+    transform: scale(1.1);
+}
+
+li p.name:hover{
+    color: grey;
+}
+
+
+.genres{
+    padding-left:0px;
+    margin-left:0px;
+}
+
+.genres li{
+    padding-left: 1em;
+}
+
+
+.info{
+    font-size: 1.3vw;
+    position: absolute; 
+    font-weight: 600;
+    margin-top: 5vh;
+    padding-left: 1em;
+}
+
+#banner{
+    max-width: 50vw;
+    height: 30vh;
+    width: 50vw;
+    position: relative;    
+    margin: 10vh 5vw;
+    transition: 0.5s;
+    float: right;
+
+}
+
+#banner:hover{
+    transform: scale(1.1);
+}
+
+#description{
+    font-style: italic;
+    font-size: 1.25vw;
+}
