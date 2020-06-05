@@ -6,3 +6,8 @@ a facebook como callback para la autenticación.
 
 La APP de facebook se encuentra en modo desarollo por lo que la autenticación sólo funcionará en localhost.
  
+Users:
+dyaffbklwm_1591316865@tfbnw.net	
+will_kpoyfxr_robinson@tfbnw.net	
+
+P: TyGWEB2020
