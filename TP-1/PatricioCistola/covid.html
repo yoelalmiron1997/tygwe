@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <title>TP N1</title>
+  </head>
+
+  <body>
+   
+    <header>
+      <nav class="navbar">
+        <div class="navbar-brand" href="index.html">
+          <img src="src/imagen2.png" width="150" height="150">         
+          <div class="navbar-item">
+           <label class="tag is-info is-large"> Trabajo Práctico Número 1 - Materia Electiva Tecnología y Gestión Web UTN-FRLP </label>
+             </div>
+             <div class="navbar-item" class="has-text-right">
+               <label  class="tag is-info is-large" >Designed by Patricio Cistola ©</label>
+             </div>
+            </div>
+         </nav>
+       </header>
+ 
+   <section class="section">
+     <div class="columns">
+       <div class="columns is -3">
+         <aside class="menu" style="margin-top: 60px;">
+          <ul class="menu-list">
+            <li>
+             <li><a class="button is-info is-rounded" href="index.html">
+               Home  
+               </a>       
+               <br>
+                 <li><a class="button is-info is-rounded" href="twitter.html">
+                 Api Tweeter  
+                 </a>
+                 <br>
+                 <li><a class="button is-info is-rounded" href="covid.html">
+                     Api Covid-19  
+                     </a>
+              </ul>
+            </li>
+           </li>
+         </aside>
+       </div>
+
+        <div class="container my-5 text-center">
+            <a class="button is-success" onclick="getdatacovid()">
+              Ver Datos Mundiales Covid-19
+            </a>
+            <div class="column is-one-fifths is-offset-four-fifth">
+                    <div class="table__wrapper" id="respuesta" style="height:320px;">
+                        <table  id="tabla" class="table is-bordered pricing__table is-fullwidth" class="table-responsive">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Registro</th>
+                                    <th scope="col">País</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Contagiados</th>
+                                    <th scope="col">Muertos</th>
+                                    <th scope="col">Recuperados</th>
+                                    <th scope="col">Total de Confirmados</th>
+                                    <th scope="col">Total de Fallecidos</th>
+                                    <th scope="col">Total de Recuperados</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+            </div>
+     </div>
+   </section>
+
+   <footer class="footer">
+    <div class="content has-text-centered">
+      <p class="has-text-white-ter">Tecnología y Gestión Web - 2020 ©</p>
+    </div>
+   </footer>
+
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/covidsummary.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.main {
+    margin: 150px;
+    width: 500px;
+    margin-left: 600px;
+}
+
+#frase1 {
+    font-size: 30px;
+    font-family: fantasy;
+    text-shadow: 2px 2px 2px #938782;
+}
+
+#frase2 {
+    font-size: 30px;
+    font-family: cursive;
+    text-shadow: 0 0 0.2em #332D2B;
+}
+
+#frase3{
+    font-size: 30px;
+    font-family: sans-serif;
+    text-shadow: #524C4A 5px 5px 5px;
+}
+
+.cabecera {
+    width: 100%;
+    height: 100px;
+    background: #dc2a04;
+    color: #332D2B;
+    font-size: 25px;
+    position: absolute;
+    top: 0px;
+    font-style: normal;
+    font-family: sans-serif;
+    display: table;
+    margin: auto;
+}
+
+.cabecera img {
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin: 5px;
+    padding: 7px;
+    margin-left: 80px;
+}
+
+h2 {
+    float: left;
+    position: relative;
+    margin-left: 250px;
+}
+
+h2 span {
+    position: absolute;
+    right: 0;
+    width: 0;
+    border-left: 1px solid #000;
+    background: #dc2a04;
+    
+
+    animation: texto 15s infinite alternate steps(40);
+}
+
+@keyframes texto {
+    from {
+        width: 100%;
+    }
+    to {
+        width: 0;
+    }
+}
+
+.lateral {
+    width: 18%;
+    min-height: 790px;
+    max-height: 100%;
+    background:#E34949;
+    font-size: 15px;
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 114px;
+    opacity: 0.7;
+}
+
+.lateral p{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+footer {
+    line-height: 3px;
+    text-align: center;
+    width: 100%;
+    height: 35px;
+    background: #2E2826;
+    position: fixed;
+    bottom: 0;
+}
+
+.pie {
+    color:white;
+    font-size: 18px;
+    text-align: right; 
+}
+
+.button1 {
+    background-image:url(imagenes/cerveza.png);
+    cursor: pointer;
+    background-repeat:no-repeat;
+    height: 200px;
+    width: 200px;
+    background-position:center;
+   -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 600px;
+}
+
+.button2 {
+    background-image:url(imagenes/walter.jpg);
+    cursor: pointer;
+    background-repeat:no-repeat;
+    height: 200px;
+    width: 200px;
+    background-position:center;
+   -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 600px;
+}
+
+.imagenes-cerveza {
+    display: none;
+    visibility: hidden;
+    padding: 150px;
+    margin-bottom: 150px;
+}
+
+.cerveza {
+    text-align: center;
+    margin: auto;
+    font-size: 25px;
+}
+
+.cerveza img {
+    min-height: 150px;
+    max-width: 160px;
+    width: 110px;
+}
+
+.cerveza p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1F1C1C;
+    text-align: right;
+    text-decoration-style: solid;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#cerveza-1 {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 100px;
+    text-align: center;
+}
+
+#cerveza-2 {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    max-width: 200px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 100px;
+    text-align: center;
+
+}
