@@ -1,0 +1,168 @@
+* {
+    font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+}
+
+body {
+    margin: 0; 
+    padding: 0;
+}
+
+header {
+    background-color: #367fa9; 
+    height: 50px; 
+    padding: 0px; 
+    border: 0px; 
+    margin-left: 0px;
+}
+
+.logo {
+    padding: 3px; float: left;
+}
+
+aside {
+    float:left; 
+    width: 19vw; 
+    background-color: #222d32; 
+    min-height: 85vh;
+}
+
+header span {
+    padding: 15px; 
+    color: beige; 
+    font-size: 20px; 
+    margin: 0px; 
+    border: 0px; 
+    display: block; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.menuOption {
+    border-left: solid beige 10px; 
+    color: beige; 
+    width: 90%; 
+    height: 30px; 
+    margin-top: 25px;
+}
+
+.menuOption:hover {
+    border-left: solid #367fa9 10px; 
+    cursor: grabbing;
+}
+
+.menuOptionText {
+    padding-left: 20px; 
+    font-size: 20px;
+}
+
+.rndPhrase {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 25px;
+    text-align: center;
+}
+
+.rndPhrase.phrase1 {
+    text-shadow:  1px 2px black, 0 0 25px rgb(0, 255, 115), 0 0 5px darkblue;
+} 
+
+.rndPhrase.phrase2 {
+    text-shadow: 0 0 3px rgb(255, 217, 0);
+} 
+
+.rndPhrase.phrase3 {
+    text-shadow: 0 0 3px blue, 0 0 6px red;
+} 
+
+.videodiv {
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.answerDiv {
+    text-align:center; 
+    padding: 10px; 
+    font-style: italic;
+    color: black;
+    font-weight: bolder;
+}
+
+
+.answerDiv.wrong {
+    color: red;
+}
+
+.answerDiv.right{
+    color: green;
+}
+
+.question {
+    text-align:center; 
+    padding: 50px; 
+    font-weight: bold;
+}
+
+.btnDiv {
+    text-align:center; 
+    padding: 30px; 
+}
+
+.btns {
+    background-color: #367fa9;
+    color: beige;
+    font-weight: bold;
+    border: solid 2px black;
+    padding: 15px;
+
+}
+
+.userDiv {
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 30px;
+}
+
+.userImage {
+    background-color: #367fa9;
+    text-align: center;
+    border-radius: 50%;
+    padding: 15px;
+    border: solid 15px black;
+}
+
+footer {
+    background-color: #367fa9; 
+    height: 50px; 
+    padding: 0px; 
+    border: 0px; 
+    margin-left: 0px; 
+    float: left; 
+    width: 100vw;
+    
+}
+
+footer span {
+    padding: 15px; 
+    color: beige; 
+    font-size: 15px; 
+    margin: 0px; 
+    border: 0px; 
+    display: block; 
+    text-align: center;
+    font-style: italic;
+}
+
+#content {
+    float: left; 
+    width: 80vw; 
+    background-color: gainsboro; 
+    margin: 0px; 
+    padding: 0px; 
+    border: 0px; 
+    min-height: 85vh;
+}
